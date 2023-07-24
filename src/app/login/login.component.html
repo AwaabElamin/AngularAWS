@@ -1,0 +1,8 @@
+<p>login works!</p>
+<input placeholder="username" (change)="usernameChanged($event)"><br/>
+<input type="password" placeholder="password" (change)="passwordChanged($event)"><br/>
+<button (click)="loginClicked()">Login</button>
+<div *ngIf="showEdit; else elseBlock">
+    <button (click)="edit()">Edit</button>
+</div>
+<ng-template #elseBlock>username and password are not match what we have!</ng-template>
