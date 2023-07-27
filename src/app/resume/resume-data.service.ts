@@ -14,11 +14,7 @@ export class ResumeDataService{
   .set('Access-Control-Allow-Origin', '*')
   .set('Access-Control-Allow-Methods', 'POST, GET, OPTIONS');
   constructor(private http:HttpClient) {this.getResume(); }
-  getResume():void{
-    this.resume =this.http.get<any>(this.backendUrl);
+  getResume():Observable<Resume>{
+    return this.http.get<any>(this.backendUrl);
   }
-  getSummary():Observable<Resume>{
-    return this.resume;
-  }
-  // getEducation():Observable<
 }

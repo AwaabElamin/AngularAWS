@@ -13,7 +13,7 @@ export class SummaryComponent implements OnInit{
     this.getSummary();
   }
   getSummary():void{
-    this.resumeDataService.getSummary()
+    this.resumeDataService.getResume()
     .subscribe(data => this.summary = data.summary);
   }
   
