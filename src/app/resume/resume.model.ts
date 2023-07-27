@@ -1,3 +1,4 @@
 export interface Resume {
-    summary:string
+    summary:string,
+    Education:object
 }
