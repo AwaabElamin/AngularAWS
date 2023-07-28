@@ -17,8 +17,8 @@ export class EducationComponent implements OnInit {
     .subscribe(data => {
       this.master = data.Education.master;
       this.Bacholar = data.Education.Bacholar;
-      console.log("Master", this.master);
-      console.log("Bacholar", this.Bacholar);
+      // console.log("Master", this.master);
+      // console.log("Bacholar", this.Bacholar);
 
     })
   }
