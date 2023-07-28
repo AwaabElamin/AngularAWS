@@ -18,7 +18,7 @@ export class ExperienceComponent implements OnInit {
       .subscribe(data => {
         this.infosys = data.Experience.Infosys;
         this.awaabLlc = data.Experience.AwaaabLLC;
-        console.log("Data",data)
+        // console.log("Data",data)
       })
   }
 
