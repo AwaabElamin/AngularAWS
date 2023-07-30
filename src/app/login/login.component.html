@@ -1,8 +1,17 @@
-<p>login works!</p>
-<input placeholder="username" (change)="usernameChanged($event)"><br/>
-<input type="password" placeholder="password" (change)="passwordChanged($event)"><br/>
-<button (click)="loginClicked()">Login</button>
-<div *ngIf="showEdit; else elseBlock">
-    <button (click)="edit()">Edit</button>
+<div class="login">
+    <div class="loginForm">
+        <div class="form-field">
+            <input placeholder="username" (change)="usernameChanged($event)">
+        </div>
+        <div class="form-field">
+            <input type="password" placeholder="password" (change)="passwordChanged($event)">
+        </div>
+        <div class="form-field">
+            <button class="btn" (click)="loginClicked()">Login</button>
+        </div>
+    </div>
+    <div class="form-field" *ngIf="showEdit; else elseBlock">
+        <button class="btn" (click)="edit()">Edit</button>
+    </div>
+    <ng-template class="form-field" #elseBlock>username and password are not match what we have!</ng-template>
 </div>
-<ng-template #elseBlock>username and password are not match what we have!</ng-template>

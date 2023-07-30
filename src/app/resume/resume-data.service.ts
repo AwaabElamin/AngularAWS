@@ -7,8 +7,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ResumeDataService{
-  private backendUrl: string = 'https://epdqkqaj3f.us-east-1.awsapprunner.com';
-  // private backendUrl: string = 'http://localhost:3000/';
+  // private backendUrl: string = 'https://epdqkqaj3f.us-east-1.awsapprunner.com';
+  private backendUrl: string = 'http://localhost:3000/resume';
   private resume!: Observable<Resume>;
   private headers= new HttpHeaders()
   .set('Access-Control-Allow-Origin', '*')

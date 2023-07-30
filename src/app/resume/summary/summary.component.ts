@@ -14,7 +14,10 @@ export class SummaryComponent implements OnInit{
   }
   getSummary():void{
     this.resumeDataService.getResume()
-    .subscribe(data => this.summary = data.summary);
+    .subscribe(data => {
+      console.log("data in summary", data)
+      this.summary = data.summary
+    });
   }
   
 }
