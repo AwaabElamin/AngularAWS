@@ -10,9 +10,9 @@ export class ResumeDataService{
   // private backendUrl: string = 'https://epdqkqaj3f.us-east-1.awsapprunner.com';
   private backendUrl: string = 'http://localhost:3000/resume';
   private resume!: Observable<Resume>;
-  private headers= new HttpHeaders()
-  .set('Access-Control-Allow-Origin', '*')
-  .set('Access-Control-Allow-Methods', 'POST, GET, OPTIONS');
+  // private headers= new HttpHeaders()
+  // .set('Access-Control-Allow-Origin', '*')
+  // .set('Access-Control-Allow-Methods', 'POST, GET, OPTIONS');
   constructor(private http:HttpClient) {this.getResume(); }
   getResume():Observable<Resume>{
     return this.http.get<any>(this.backendUrl);

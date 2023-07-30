@@ -9,9 +9,12 @@
         <div class="form-field">
             <button class="btn" (click)="loginClicked()">Login</button>
         </div>
+        <div class="form-field" *ngIf="showEdit; else elseBlock">
+            <button class="btn" (click)="edit()">Edit</button>
+        </div>
+        <ng-template #elseBlock>
+                <span>{{errorMessage}}</span>
+        </ng-template>
     </div>
-    <div class="form-field" *ngIf="showEdit; else elseBlock">
-        <button class="btn" (click)="edit()">Edit</button>
-    </div>
-    <ng-template class="form-field" #elseBlock>username and password are not match what we have!</ng-template>
+    
 </div>
