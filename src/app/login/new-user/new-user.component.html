@@ -1,0 +1,25 @@
+<div class="newUser">
+    <form [formGroup]="newUserForm" (ngSubmit)="onSubmit()">
+        <div class="form-field">
+            <label for="firstname">firstname: </label>
+            <input id="firstname" type="text" formControlName="firstname">
+        </div>
+        <div class="form-field">
+            <label for="lastname">lastname: </label>
+            <input id="lastname" type="text" formControlName="lastname">
+        </div>
+        <div class="form-field">
+            <label for="email">email: </label>
+            <input id="email" type="text" formControlName="email">
+        </div>
+        <div class="form-field">
+            <label for="username">username: </label>
+            <input id="username" type="text" formControlName="username">
+        </div>
+        <div class="form-field">
+            <label for="password">password: </label>
+            <input id="password" type="password" formControlName="password">
+        </div>
+        <button class="btn" type="submit" [disabled]="!newUserForm.valid">Submit</button>
+    </form>
+</div>

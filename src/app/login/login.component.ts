@@ -49,7 +49,7 @@ export class LoginComponent implements OnInit {
       }
       );
   }
-  edit() {
-    console.log("edit");
+  newClicked() {
+    this.router.navigate(['/login/new']);
   }
 }

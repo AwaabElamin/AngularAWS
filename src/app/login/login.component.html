@@ -8,13 +8,11 @@
         </div>
         <div class="form-field">
             <button class="btn" (click)="loginClicked()">Login</button>
+            <button class="btn" (click)="newClicked()">new</button>
         </div>
-        <div class="form-field" *ngIf="showEdit; else elseBlock">
-            <button class="btn" (click)="edit()">Edit</button>
+        <div class="form-field" >
+            <span>{{errorMessage}}</span>
         </div>
-        <ng-template #elseBlock>
-                <span>{{errorMessage}}</span>
-        </ng-template>
     </div>
     
 </div>
