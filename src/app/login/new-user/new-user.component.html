@@ -1,8 +1,9 @@
 <div class="newUser">
-    <form [formGroup]="newUserForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="newUserForm" (ngSubmit)="onSubmit()" (change)="FormChanged()">
         <div class="form-field">
             <label for="firstname">firstname: </label>
-            <input id="firstname" type="text" formControlName="firstname">
+            <input id="firstname" name="firstname" type="text" formControlName="firstname">
+        
         </div>
         <div class="form-field">
             <label for="lastname">lastname: </label>
@@ -21,5 +22,8 @@
             <input id="password" type="password" formControlName="password">
         </div>
         <button class="btn" type="submit" [disabled]="!newUserForm.valid">Submit</button>
+        <div class="form-field">
+            <span>{{formStatus}}</span>
+        </div>
     </form>
 </div>

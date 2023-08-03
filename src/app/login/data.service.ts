@@ -10,12 +10,12 @@ export class DataService {
   // private backendUrl: string = 'https://epdqkqaj3f.us-east-1.awsapprunner.com/users/login';
   private backendUrl: string = 'http://localhost:3000/users/login';
   private body = {
-    username:"test",
+    email:"test",
     password:"123"
   }
   constructor(private Http:HttpClient) { }
-  postLogin(username:string, password:string):Observable<Login>{
-    this.body.username = username;
+  postLogin(email:string, password:string):Observable<Login>{
+    this.body.email = email;
     this.body.password = password;
     return this.Http.post<any>(this.backendUrl,this.body);
   }
