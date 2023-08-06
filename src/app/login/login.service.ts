@@ -11,6 +11,7 @@ export class LoginService {
 private backendUrl: string = 'http://localhost:3000/users';
   constructor(private http:HttpClient) { }
   postNewUser(user:LoginUser):Observable<any>{
+    console.log('user', user)
     return this.http.post<any>(this.backendUrl,{user})
   }
 }

@@ -33,6 +33,7 @@ export class NewUserComponent {
       lastname: this.newUserForm.get('lastname')!.value,
       email: this.newUserForm.get('email')!.value
     }
+    console.log(newuser);
     this.loginService.postNewUser(newuser)
       .subscribe(data =>{
                 if (data.status === 'success') {

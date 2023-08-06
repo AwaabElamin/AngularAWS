@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
   }
   passwordChanged(e: any) {
     this.password = e.target.value;
-    // console.log(this.password);
+    console.log(this.password);
   }
   loginClicked() {
     this.loginService.postLogin(this.email, this.password)
