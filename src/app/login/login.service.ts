@@ -2,13 +2,13 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { LoginUser } from './LoginUser.model';
+import { environment } from 'src/environments';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
-  private backendUrl: string = 'https://epdqkqaj3f.us-east-1.awsapprunner.com/users';
-  // private backendUrl: string = 'http://localhost:3000/users';
+  private backendUrl: string = environment.url + 'users';
   constructor(private http: HttpClient) { }
   postNewUser(user: LoginUser): Observable<any> {
     console.log('user', user)

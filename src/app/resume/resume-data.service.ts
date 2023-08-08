@@ -2,13 +2,13 @@ import { Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
 import { Resume } from './resume.model';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { environment } from 'src/environments';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ResumeDataService{
-  private backendUrl: string = 'https://epdqkqaj3f.us-east-1.awsapprunner.com/resume';
-  // private backendUrl: string = 'http://localhost:3000/resume';
+  private backendUrl: string = environment.url + 'resume';
   private resume!: Observable<Resume>;
   // private headers= new HttpHeaders()
   // .set('Access-Control-Allow-Origin', '*')
