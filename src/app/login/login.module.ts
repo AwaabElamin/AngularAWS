@@ -5,11 +5,13 @@ import { LoginRoutingModule } from './login-routing.module';
 import { LoginComponent } from './login.component';
 import { NewUserComponent } from './new-user/new-user.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 
 @NgModule({
   declarations: [
     LoginComponent,
-    NewUserComponent
+    NewUserComponent,
+    ForgetPasswordComponent
   ],
   imports: [
     CommonModule,

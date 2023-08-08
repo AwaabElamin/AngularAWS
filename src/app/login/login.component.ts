@@ -52,4 +52,8 @@ export class LoginComponent implements OnInit {
   newClicked() {
     this.router.navigate(['/login/new']);
   }
+  forgetClicked(){
+    console.log('forgetClicked');
+    this.router.navigate(['login/forget'])
+  }
 }

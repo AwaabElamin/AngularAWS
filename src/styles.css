@@ -236,6 +236,96 @@ a:hover {
     transform: translateY(-0.25rem);
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 }
+form{
+    width: 350px;    
+    font-family: 'Lato', sans-serif;
+    justify-content: center;
+    align-items: center;    
+    position: relative; 
+    /* box-shadow: 0px 3px 6px rgba(179, 13, 13, 0.16);
+    color: #b70d0d; */
+}
+form .form-field::before {    
+    position: absolute;
+    left: 15px;
+    top: 17px;
+    color: #888888;
+    content: " ";
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+form .form-field:nth-child(1)::before {
+    /* background-image: url(../../assets/logos/img/user-icon.png); */
+    width: 20px;
+    height: 20px;
+    top: 15px;
+}
+
+form .form-field:nth-child(2)::before {
+    /* background-image: url(./   /logos/img/lock-icon.png); */
+    width: 16px;
+    height: 16px;
+}
+form .form-field {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    /* margin-bottom: 1rem; */
+    position: relative;
+}
+form input {
+    font-family: inherit;
+    width: 80%;
+    outline: none;
+    background-color: #fff;
+    border-radius: 4px;
+    border: none;
+    display: block;
+    padding: 0.5rem 0.1rem;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    color: #4A4A4A;
+    text-indent: 10px;
+}
+
+form label{
+    min-width: 20%;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    padding-left: 0.5rem;
+    padding-right: 1rem;
+    margin: 0.3rem;
+    box-shadow: 0px 3px 6px rgba(84, 71, 71, 0.16);
+    border-radius: 1px;
+    background-color: #f5b0b0;
+    text-align: left;
+}
+.btn{
+    outline: none;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0.5rem auto;
+    padding: 0.5rem 0.5rem;
+    text-align: center;
+    background-color: #47AB11;
+    color: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    font-size: 17px;
+}
+.btn[disabled]{
+    background-color: #d2d2a8;
+    color: #facbcb;
+}
 
 footer {
     margin-top: 8px;
