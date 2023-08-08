@@ -7,8 +7,8 @@ import { LoginUser } from './LoginUser.model';
   providedIn: 'root'
 })
 export class LoginService {
-  // private backendUrl: string = 'https://epdqkqaj3f.us-east-1.awsapprunner.com/resume';
-  private backendUrl: string = 'http://localhost:3000/users';
+  private backendUrl: string = 'https://epdqkqaj3f.us-east-1.awsapprunner.com/resume';
+  // private backendUrl: string = 'http://localhost:3000/users';
   constructor(private http: HttpClient) { }
   postNewUser(user: LoginUser): Observable<any> {
     console.log('user', user)
