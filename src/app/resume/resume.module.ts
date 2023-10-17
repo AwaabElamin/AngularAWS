@@ -7,6 +7,7 @@ import { SummaryComponent } from './summary/summary.component';
 import { EducationComponent } from './education/education.component';
 import { CertificatesComponent } from './certificates/certificates.component';
 import { ExperienceComponent } from './experience/experience.component';
+import { TitleComponent } from './title/title.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { ExperienceComponent } from './experience/experience.component';
     SummaryComponent,
     EducationComponent,
     CertificatesComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    TitleComponent
   ],
   imports: [
     CommonModule,

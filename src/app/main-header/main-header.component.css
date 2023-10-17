@@ -1,0 +1,76 @@
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    background-color: blue;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 1%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.whiteLink {
+    /* padding-left: 3px;
+    margin-left: 3px; */
+    color: white;
+}
+
+.whiteLink img {
+    margin: 0 16px;
+}
+
+.whiteLink #twitter-logo {
+    margin: 0 8px;
+}
+
+.whiteLink #youtube-logo {
+    margin: 0 16px;
+}
+
+.whiteLink #twitter-logo:hover,
+.whiteLink #youtube-logo:hover {
+    opacity: 0.8;
+}
+
+.left {
+    float: left;
+    width: 20%;
+}
+
+.middle {
+    width: 80%;
+}
+
+.resume {
+    width: 70px;
+}
+
+.login {
+    width: 50px;
+}
+
+.facebookLogo {
+    width: 40px;
+}
+
+.twitterLogo {
+    width: 40px;
+}
+
+.right {
+    float: right;
+    width: 20%;
+}
+
+.loginDiv {
+    width: 34px;
+}

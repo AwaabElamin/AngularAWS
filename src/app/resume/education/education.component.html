@@ -1,24 +1,23 @@
 <div class="card-education">
-    <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-      <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z" />
-    </svg>
-    <h4>Education</h4>
-    <div>
-      <ul>
-        <li>
-          <a aria-label="miu" target="_blank" rel="noopener" href="{{master.split(',')[0]}}" title="miu">
-           {{master.split(",")[1]}}
-          </a>
-          <p>{{master.split(",")[2]}}</p>
-          <p>{{master.split(",")[3]}}</p>
-        </li>
-        <li>
-          <a aria-label="ust" target="_blank" rel="noopener" href="{{Bacholar.split(',')[0]}}" title="ust">
-            {{Bacholar.split(',')[1]}}
-          </a>
-          <p>{{Bacholar.split(',')[2]}}</p>
-          <p>{{Bacholar.split(',')[3]}}</p>
-        </li>
-      </ul>
-    </div>
-  </div>
+  <h4>Education</h4>
+  <ul>
+    <li>
+      <p>
+        {{master.split(",")[2]}},
+        <a aria-label="miu" target="_blank" rel="noopener" href="{{master.split(',')[0]}}" title="miu">
+          {{master.split(",")[1]}}
+        </a>,
+        {{master.split(",")[3]}}
+      </p>
+    </li>
+    <li>
+      <p>
+        <a aria-label="ust" target="_blank" rel="noopener" href="{{Bacholar.split(',')[0]}}" title="ust">
+          {{Bacholar.split(',')[1]}}
+        </a>,
+        {{Bacholar.split(',')[2]}},
+        {{Bacholar.split(',')[3]}}
+      </p>
+    </li>
+  </ul>
+</div>
