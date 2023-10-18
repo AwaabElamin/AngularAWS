@@ -1,0 +1,11 @@
+.titleRow{
+    display: grid;
+    grid-template-columns: 20% 30% 40% 10%;
+    padding-left: 1%;
+}
+.elem{
+    width: 100%;
+}
+.right{
+    float: right;
+}
