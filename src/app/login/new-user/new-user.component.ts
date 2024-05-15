@@ -27,7 +27,7 @@ export class NewUserComponent {
     // console.warn(this.newUserForm.value);
     // console.log(this.newUserForm.get('firstname'))
     const newuser: LoginUser = {
-      username: this.newUserForm.get('username')!.value,
+      
       password: this.newUserForm.get('password')!.value,
       firstname: this.newUserForm.get('firstname')!.value,
       lastname: this.newUserForm.get('lastname')!.value,

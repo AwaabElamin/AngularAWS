@@ -15,3 +15,6 @@ export interface Resume {
     Certificate:{Associate:string, Certificates:string}
     Experience:{Infosys:string,AwaaabLLC:string}
 }
+export interface Summary {
+    summary:string,
+}

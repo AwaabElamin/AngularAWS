@@ -15,6 +15,8 @@ export class EducationComponent implements OnInit {
   getEducation(): void {
     this.resumeDataService.getResume()
     .subscribe(data => {
+      console.log("resume data",data)
+      console.log("resume data Education",typeof data.Education)
       this.master = data.Education.master;
       this.Bacholar = data.Education.Bacholar;
       // console.log("Master", this.master);

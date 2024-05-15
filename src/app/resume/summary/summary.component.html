@@ -1,1 +1,8 @@
-<div class="card-about">{{summary}}</div>
+<div class="card-about">
+    <button (click)="editClicked()">{{btnValue}}</button>
+    <div *ngIf="editValue; else elseBlock">
+        <input class="editClass" type="text" (change)="editChanged($event)"  value="{{summary}}"/>
+    </div>
+    <ng-template #elseBlock>{{summary}}</ng-template>
+   
+</div>

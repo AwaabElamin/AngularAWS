@@ -8,7 +8,9 @@ import {
 } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-@Injectable()
+@Injectable({
+  providedIn:'root'
+})
 export class AuthInterceptorInterceptor implements HttpInterceptor {
 
   constructor() {}
