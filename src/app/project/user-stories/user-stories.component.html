@@ -1,1 +1,17 @@
-<p>user-stories works!</p>
+<div class="mainDiv">
+    As 
+    <select #cricket (change)="updateActor($event)"> 
+        <option value="default">----</option> 
+        <option *ngFor="let actor of actors" [value]="actor"> 
+            {{actor}} 
+        </option> 
+    </select> 
+    I need to
+    <select #cricket (change)="updateCRUD($event)"> 
+        <option value="default">----</option> 
+        <option *ngFor="let crud of CRUDs" [value]="crud"> 
+            {{crud}} 
+        </option>         
+    </select> 
+    <input type="text" (change)="updateInputAction($event)"/>
+</div>
