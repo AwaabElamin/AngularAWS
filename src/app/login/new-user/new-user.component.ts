@@ -26,14 +26,45 @@ export class NewUserComponent {
     // TODO: Use EventEmitter with form value
     // console.warn(this.newUserForm.value);
     // console.log(this.newUserForm.get('firstname'))
-    const newuser: LoginUser = {
-      
+    const newuser: LoginUser = {      
       password: this.newUserForm.get('password')!.value,
       firstname: this.newUserForm.get('firstname')!.value,
       lastname: this.newUserForm.get('lastname')!.value,
-      email: this.newUserForm.get('email')!.value
+      email: this.newUserForm.get('email')!.value,
+      
+      phone:null,    
+      title: null,
+      city:  null,
+      state: null,
+      country:null,
+      linkedin: null,
+      github: null,
+      webside:  null,
+      summary: null,
+      keySkills: null,
+      technicalSkills: null,
+      education: [{
+          universityName: null,
+          degree:null,
+          fieldName:  null,
+          month: null,
+          year:null,
+          location: null,
+          gpa:  null
+      }],
+      experience: [{
+          companyName:null,
+          jobTitle:  null,
+          startMonth:null,
+          startYear: null,
+          endMonth: null,
+          endYear:null,
+          location: null,
+          summary:  null
+      }],
+      Additional: []
     }
-    console.log(newuser);
+    console.log("newuser: ",newuser);
     this.loginService.postNewUser(newuser)
       .subscribe(data =>{
                 if (data.status === 'success') {
