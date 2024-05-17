@@ -27,7 +27,7 @@ export class ForgetPasswordComponent {
       if (data.status == 'success') {
         this.router.navigate(['login']);
       } else {
-        this.formStatus = data.data + ', please try again';
+        this.formStatus = data.message + ', please try again';
         console.log(data);
         console.log(data.status);
       }
