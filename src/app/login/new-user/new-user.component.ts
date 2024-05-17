@@ -64,7 +64,7 @@ export class NewUserComponent {
       }],
       Additional: []
     }
-    console.log("newuser: ",newuser);
+    // console.log("newuser: ",newuser);
     this.loginService.postNewUser(newuser)
       .subscribe(data =>{
                 if (data.status === 'success') {

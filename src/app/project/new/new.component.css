@@ -1,0 +1,8 @@
+.newUser {    
+    display: flex;
+    color: #4A4A4A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;  
+}

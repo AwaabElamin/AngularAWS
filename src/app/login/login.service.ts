@@ -16,7 +16,7 @@ export class LoginService {
     // public securityObject:AppUserAuth
   ) { }
   postNewUser(user: LoginUser): Observable<any> {
-    console.log('user', user)
+    // console.log('user', user)
     return this.http.post<any>(this.backendUrl, { user })
   }
   postResetPassword(email: any, password: any){

@@ -1,0 +1,6 @@
+<div class="newUser">
+   <label for="ProjectName">Project Name</label>
+   <input type="text" (change)="projectName($event);"/>
+   <button (click)="submitNewProject()">submit</button>
+   <span>{{errorMessage}}</span>
+</div>
