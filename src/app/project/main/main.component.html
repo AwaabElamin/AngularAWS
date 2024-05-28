@@ -1,13 +1,13 @@
 <div class="navMainProject">
   <div class="SDLCTitles">
-   <a href="./resume" target="_self" rel="noopener"><span>resume</span></a>    
+    <a href="./resume" target="_self" rel="noopener"><span>resume</span></a>
   </div>
   <div class="SDLCTitles" (click)="newProjectClicked();">
-      <span>New Project</span>
+    <span>New Project</span>
   </div>
-  <div class="SDLCTitles"(click)="CurrentProjectClicked();">
+  <div class="SDLCTitles" (click)="CurrentProjectClicked();">
     <span>Current Projects</span>
-</div>
+  </div>
 </div>
 <!-- <div class="navMainProject">
   <div class="SDLCTitles">
@@ -46,6 +46,7 @@
     </a>
   </div>
 </div> -->
-
-<app-new *ngIf="newProject; else elseBlock"/>
-<ng-template #elseBlock><app-all-projects/> </ng-template>
+<div>
+  <app-new *ngIf="newProject; else elseBlock" />
+  <ng-template #elseBlock><app-all-projects /></ng-template>
+</div>
