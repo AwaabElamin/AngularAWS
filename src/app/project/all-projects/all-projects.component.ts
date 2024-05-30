@@ -21,6 +21,9 @@ export class AllProjectsComponent implements OnInit {
   ngOnInit(): void {
     this.getProjects();
   }
+  buttonClicked(e:any){
+    console.log(e.target.value);
+  }
   projectNameClicked(id: string, name:string) {
     this.projectId = id;    
     console.log(this.projectId);
