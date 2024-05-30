@@ -21,12 +21,14 @@ export class AllProjectsComponent implements OnInit {
   ngOnInit(): void {
     this.getProjects();
   }
-  buttonClicked(e:any){
-    console.log(e.target.value);
+  RequirementsClicked(e:any){
+    console.log(localStorage.getItem('PID'));    
+    this.router.navigate(['/project/userStories']);
   }
   projectNameClicked(id: string, name:string) {
     this.projectId = id;    
     console.log(this.projectId);
+    localStorage.setItem('PID', this.projectId);
     this.projectName = name;
     this.ProjectSelected = !this.ProjectSelected;
   }
