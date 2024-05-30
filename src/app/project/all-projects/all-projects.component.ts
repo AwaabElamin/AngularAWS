@@ -11,25 +11,34 @@ export class AllProjectsComponent implements OnInit {
   allProjects = [{
     _id: '', email: '', projectName: '', __v: 0
   }];
+  ProjectSelected: boolean = false;
+  projectId:string = "";
+  projectName: string = "";
   errorMessage = "";
-  constructor(private ProjectService: ProjectsServicesService, private router: Router) { 
+  constructor(private ProjectService: ProjectsServicesService, private router: Router) {
     this.getProjects();
   }
   ngOnInit(): void {
     this.getProjects();
   }
-  getProjects():void{
-  const email: any = localStorage.getItem('email') ? localStorage.getItem('email') : "";
+  projectNameClicked(id: string, name:string) {
+    this.projectId = id;    
+    console.log(this.projectId);
+    this.projectName = name;
+    this.ProjectSelected = !this.ProjectSelected;
+  }
+  getProjects(): void {
+    const email: any = localStorage.getItem('email') ? localStorage.getItem('email') : "";
     this.ProjectService.getAllProjects(email)
-    .subscribe(data => {
-      if (data.status == 'success' && data.message !== "project already exist") {
-       this.allProjects = data.message;
-       console.log(data)
-      }
-      else {
-        console.log("error", data)
-        this.errorMessage = "error: " + data.status + " " + data.message;
-      }
-    });
-}
+      .subscribe(data => {
+        if (data.status == 'success' && data.message !== "project already exist") {
+          this.allProjects = data.message;
+          console.log(data)
+        }
+        else {
+          console.log("error", data)
+          this.errorMessage = "error: " + data.status + " " + data.message;
+        }
+      });
+  }
 }
