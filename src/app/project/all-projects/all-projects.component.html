@@ -1,8 +1,32 @@
 <div class="SDLCTitles">
     <h1>All Projects</h1>
     <ul *ngFor="let item of allProjects; index as _id;">
-        <li>{{item.projectName}}</li>
+        <li (click)="projectNameClicked(item._id, item.projectName)">{{item.projectName}}</li>
     </ul>
-    
-    <div>{{errorMessage}}</div>
 </div>
+<div>{{errorMessage}}</div>
+<div class="navMainProject" *ngIf="ProjectSelected; else elseBlockOfProject">
+    <h1>{{projectName}}</h1>
+    <div class="SDLCTitles">
+            <span>Planning</span>
+    </div>
+    <div class="SDLCTitles">
+            <span>Requirements</span>
+    </div>
+    <div class="SDLCTitles">
+            <span>Design</span>
+    </div>
+    <div class="SDLCTitles">
+            <span>Implementation</span>
+    </div>
+    <div class="SDLCTitles">
+            <span>Testing</span>
+    </div>
+    <div class="SDLCTitles">
+            <span>Deployment</span>
+    </div>
+    <div class="SDLCTitles">
+            <span>Maintenance</span>
+    </div>
+</div>
+<ng-template #elseBlockOfProject></ng-template>
