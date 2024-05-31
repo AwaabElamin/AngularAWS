@@ -14,4 +14,7 @@ export class ProjectsServicesService {
   getAllProjects(email?:string){
     return this.http.get<any>(this.backendUrl+'/'+email)
   }
+  addUserStory(actor:string,cRDU:string,action:string){
+    return this.http.post<any>(this.backendUrl+"/userStory",{actor:actor,cRUD:cRDU,action:action})
+  }
 }
