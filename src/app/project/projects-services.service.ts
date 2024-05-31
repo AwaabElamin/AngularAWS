@@ -15,6 +15,8 @@ export class ProjectsServicesService {
     return this.http.get<any>(this.backendUrl+'/'+email)
   }
   addUserStory(actor:string,cRDU:string,action:string){
-    return this.http.post<any>(this.backendUrl+"/userStory",{actor:actor,cRUD:cRDU,action:action})
+    const email = localStorage.getItem('email');
+    const PID = localStorage.getItem('PID');
+    return this.http.post<any>(this.backendUrl+"/userStory",{email:email,PID:PID,actor:actor,cRUD:cRDU,action:action})
   }
 }
