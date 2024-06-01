@@ -17,5 +17,7 @@ export class MainHeaderComponent implements DoCheck{
   }
   logoutClicked(){
     localStorage.removeItem('userToken');
+    localStorage.removeItem('email');
+    localStorage.removeItem('PID');
   }
 }

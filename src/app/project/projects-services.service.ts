@@ -14,4 +14,9 @@ export class ProjectsServicesService {
   getAllProjects(email?:string){
     return this.http.get<any>(this.backendUrl+'/'+email)
   }
+  addUserStory(actor:string,cRDU:string,action:string){
+    const email = localStorage.getItem('email');
+    const PID = localStorage.getItem('PID');
+    return this.http.post<any>(this.backendUrl+"/userStory",{email:email,PID:PID,actor:actor,cRUD:cRDU,action:action})
+  }
 }
