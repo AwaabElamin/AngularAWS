@@ -13,12 +13,21 @@ export class UserStoriesComponent {
   selectedActor = "----";
   selectedCRUD = "----";
   InputActionValue = "----";
+  userStories = [{
+    actor: "",
+    cRUD:"",
+    action:"",
+    _id: ""
+  }];
   constructor(private projectsServices:ProjectsServicesService,private router: Router){}
   updateActor=(e: any)=>this.selectedActor = e.target.value;
   updateCRUD=(e: any)=>this.selectedCRUD = e.target.value;
   updateInputAction=(e: any)=>this.InputActionValue = e.target.value;
   buttonClicked(){
     this.projectsServices.addUserStory(this.selectedActor,this.selectedCRUD,this.InputActionValue)
-    .subscribe(data=>console.log(data));
+    .subscribe(data=>{
+      console.log(data);
+      data.message? this.userStories = data.message.userStories: null;
+    });
   }
 }
