@@ -16,3 +16,6 @@
     <input type="text" (change)="updateInputAction($event)"/>
     <button (click)="buttonClicked()">submit</button>
 </div>
+<div *ngFor="let userStory of userStories" >
+    <p>As a {{userStory.actor}} I need to {{userStory.cRUD}} {{userStory.action}}</p>
+</div>
