@@ -20,9 +20,7 @@ export class UserStoriesComponent implements OnInit {
     _id: ""
   }];
   constructor(private projectsServices:ProjectsServicesService,private router: Router){}
-  // ngOnInit(changes: SimpleChanges): void {
-  //   this.getAllUserStories();
-  // }
+ git
   updateActor=(e: any)=>this.selectedActor = e.target.value;
   updateCRUD=(e: any)=>this.selectedCRUD = e.target.value;
   updateInputAction=(e: any)=>this.InputActionValue = e.target.value;
