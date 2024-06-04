@@ -6,6 +6,11 @@ import { environment } from 'src/environments';
   providedIn: 'root'
 })
 export class ProjectsServicesService {
+  getAllUserStories() {
+    const email = localStorage.getItem('email');
+    const PID = localStorage.getItem('PID');
+    return this.http.get<any>(this.backendUrl+"/userStory" + "/" + email + "/" +PID)
+  }
   private backendUrl: string = environment.url + 'projects';
   constructor(private http: HttpClient) { }
   postNewProject(email?:string, projectName?:String){
