@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   templateUrl: './user-stories.component.html',
   styleUrls: ['./user-stories.component.css']
 })
-export class UserStoriesComponent implements OnChanges {
+export class UserStoriesComponent implements OnChanges, OnInit {
   actors = ["Customer","Admin","Manager","HR","Employee"];
   CRUDs = ["Create","Read","Update","Delete"];
   selectedActor = "----";
@@ -20,6 +20,9 @@ export class UserStoriesComponent implements OnChanges {
     _id: ""
   }];
   constructor(private projectsServices:ProjectsServicesService,private router: Router){}
+  ngOnInit(): void {
+    this.getAllUserStories();
+  }
   ngOnChanges(changes: SimpleChanges): void {
     this.getAllUserStories();
   }
@@ -29,7 +32,8 @@ export class UserStoriesComponent implements OnChanges {
   getAllUserStories(){
     this.projectsServices.getAllUserStories()
     .subscribe(data =>{
-      data.message && data.status === "success"? this.userStories = data.message.userStories: null;
+      console.log('get all user stories: ',data);
+      data.message && data.status === "success"? this.userStories = data.message: null;
     });
   }
   buttonClicked(){
