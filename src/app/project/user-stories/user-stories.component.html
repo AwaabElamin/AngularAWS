@@ -1,12 +1,12 @@
-<div>
-    As 
+<div class="addNew">
+   <span>As</span> 
     <select #cricket (change)="updateActor($event)"> 
         <option value="default">----</option> 
         <option *ngFor="let actor of actors" [value]="actor"> 
             {{actor}} 
         </option> 
     </select> 
-    I need to
+    <span>I need to</span> 
     <select #cricket (change)="updateCRUD($event)"> 
         <option value="default">----</option> 
         <option *ngFor="let crud of CRUDs" [value]="crud"> 

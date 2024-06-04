@@ -1,0 +1,17 @@
+.addNew{
+    color:blue;
+    padding-top: 3%;
+    font-size: mediums;
+}
+.addNew span{
+    margin-left: 3px;
+    margin-right: 3px;
+}
+.addNew select{
+    margin-left: 3px;
+    margin-right: 3px;
+}
+.addNew input{
+    margin-left: 3px;
+    margin-right: 3px;
+}
