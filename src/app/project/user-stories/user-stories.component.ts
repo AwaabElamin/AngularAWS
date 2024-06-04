@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   templateUrl: './user-stories.component.html',
   styleUrls: ['./user-stories.component.css']
 })
-export class UserStoriesComponent implements OnInit {
+export class UserStoriesComponent implements OnChanges {
   actors = ["Customer","Admin","Manager","HR","Employee"];
   CRUDs = ["Create","Read","Update","Delete"];
   selectedActor = "----";
@@ -20,6 +20,9 @@ export class UserStoriesComponent implements OnInit {
     _id: ""
   }];
   constructor(private projectsServices:ProjectsServicesService,private router: Router){}
+  ngOnChanges(changes: SimpleChanges): void {
+    this.getAllUserStories();
+  }
   updateActor=(e: any)=>this.selectedActor = e.target.value;
   updateCRUD=(e: any)=>this.selectedCRUD = e.target.value;
   updateInputAction=(e: any)=>this.InputActionValue = e.target.value;
