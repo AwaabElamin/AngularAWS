@@ -29,6 +29,12 @@ export class UserStoriesComponent implements OnChanges, OnInit {
   updateActor=(e: any)=>this.selectedActor = e.target.value;
   updateCRUD=(e: any)=>this.selectedCRUD = e.target.value;
   updateInputAction=(e: any)=>this.InputActionValue = e.target.value;
+  openUseCase(id:string){
+    console.log('open use case of: ', id);
+  }
+  openUI(id:string){
+    console.log('open UI of: ',id);
+  }
   getAllUserStories(){
     this.projectsServices.getAllUserStories()
     .subscribe(data =>{

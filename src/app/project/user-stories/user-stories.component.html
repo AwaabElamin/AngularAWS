@@ -16,6 +16,24 @@
     <input type="text" (change)="updateInputAction($event)"/>
     <button (click)="buttonClicked()">submit</button>
 </div>
-<div *ngFor="let userStory of userStories" >
-    <p>As a {{userStory.actor}} I need to {{userStory.cRUD}} {{userStory.action}}</p>
-</div>
+<table class="viewAll"  >
+    <thead>
+        <tr>
+        <th>As</th><th>I need to</th><th>Action</th>
+    </tr>
+    </thead>
+    <tbody *ngFor="let userStory of userStories">
+        <tr>
+            <td>{{userStory.actor}}</td>
+            <td>{{userStory.cRUD}}</td>
+            <td>{{userStory.action}}</td>
+            <td><button (click)="openUseCase(userStory._id)">Use Case</button></td>
+            <td><button (click)="openUI(userStory._id)">UI</button></td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td></td><td></td><td></td>
+        </tr>
+    </tfoot>
+</table>
