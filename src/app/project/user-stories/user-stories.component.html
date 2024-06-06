@@ -1,39 +1,45 @@
 <div class="addNew">
-   <span>As</span> 
-    <select #cricket (change)="updateActor($event)"> 
-        <option value="default">----</option> 
-        <option *ngFor="let actor of actors" [value]="actor"> 
-            {{actor}} 
-        </option> 
-    </select> 
-    <span>I need to</span> 
-    <select #cricket (change)="updateCRUD($event)"> 
-        <option value="default">----</option> 
-        <option *ngFor="let crud of CRUDs" [value]="crud"> 
-            {{crud}} 
-        </option>         
-    </select> 
-    <input type="text" (change)="updateInputAction($event)"/>
+    <span>As</span>
+    <select #cricket (change)="updateActor($event)">
+        <option value="default">----</option>
+        <option *ngFor="let actor of actors" [value]="actor">
+            {{actor}}
+        </option>
+    </select>
+    <span>I need to</span>
+    <select #cricket (change)="updateCRUD($event)">
+        <option value="default">----</option>
+        <option *ngFor="let crud of CRUDs" [value]="crud">
+            {{crud}}
+        </option>
+    </select>
+    <input type="text" (change)="updateInputAction($event)" />
     <button (click)="buttonClicked()">submit</button>
 </div>
-<table class="viewAll"  >
+<table class="viewAll">
     <thead>
         <tr>
-        <th>As</th><th>I need to</th><th>Action</th>
-    </tr>
+            <th>As</th>
+            <th>I need to</th>
+            <th>Action</th>
+        </tr>
     </thead>
     <tbody *ngFor="let userStory of userStories">
         <tr>
             <td>{{userStory.actor}}</td>
             <td>{{userStory.cRUD}}</td>
             <td>{{userStory.action}}</td>
-            <td><button (click)="openUseCase(userStory._id)">Use Case</button></td>
+            <td><a
+                [routerLink]="['../useCase',userStory._id]"
+                >Use Case</a></td>
             <td><button (click)="openUI(userStory._id)">UI</button></td>
         </tr>
     </tbody>
     <tfoot>
         <tr>
-            <td></td><td></td><td></td>
+            <td></td>
+            <td></td>
+            <td></td>
         </tr>
     </tfoot>
 </table>
