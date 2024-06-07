@@ -1,1 +1,63 @@
-<p>use-cases works!</p>
+<div class="mainDiv">
+    <form action="">
+        <div class="form-field">
+            <label for="id">ID</label><br>
+            <input type="text" name="id" id="id" [value]="useCase.id" />
+        </div>
+        <div class="form-field">
+            <label for="title">Use Case</label><br>
+            <input type="text" name="title" id="title" [value]="useCase.title" />
+        </div>
+        <div class="form-field">
+            <label for="description">Description</label><br>
+            <textarea type="text" name="description" id="description" rows="10" cols="30"
+                [value]="useCase.description"></textarea>
+        </div>
+        <div class="form-field">
+            <label for="PrimaryActor">Primary Actor</label><br>
+            <input type="text" name="PrimaryActor" id="PrimaryActor" [value]="useCase.PrimaryActor" />
+        </div>
+        <div class="form-field">
+            <label for="Preconditions">Preconditions</label><br>
+            <textarea type="text" name="Preconditions" id="Preconditions" rows="10" cols="30"
+                [value]="useCase.Preconditions"></textarea>
+        </div>
+        <div class="form-field">
+            <label for="postCondition">postCondition</label><br>
+            <textarea type="text" name="postCondition" id="postCondition" rows="10" cols="30"
+                [value]="useCase.postCondition"></textarea>
+        </div>
+        <div class="form-field">
+            <label for="mainSuccessScenario">main Success Scenario</label><br>
+            <textarea type="text" name="mainSuccessScenario" id="mainSuccessScenario" rows="10" cols="30"
+                [value]="useCase.mainSuccessScenario"></textarea>
+        </div>
+        <div class="form-field">
+            <label for="extensions">extensions</label><br>
+            <textarea type="text" name="extensions" id="extensions" rows="10" cols="30"
+                [value]="useCase.extensions"></textarea>
+        </div>
+        <div class="form-field">
+            <label for="frequencyOfUse">frequencyOfUse</label><br>
+            <textarea type="text" name="frequencyOfUse" id="frequencyOfUse" rows="10" cols="30"
+                [value]="useCase.frequencyOfUse"></textarea>
+        </div>
+        <div class="form-field">
+            <label for="status">status</label><br>
+            <input type="text" name="status" id="status" [value]="useCase.status" />
+
+        </div>
+        <div class="form-field">
+            <label for="owner">owner</label><br>
+            <input type="text" name="owner" id="owner" [value]="useCase.owner" />
+        </div>
+        <div class="form-field">
+            <label for="priority">priority</label><br>
+            <input type="text" name="priority" id="priority" [value]="useCase.priority" />
+        </div>
+    </form>
+
+    
+
+    
+</div>

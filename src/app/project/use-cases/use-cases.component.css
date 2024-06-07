@@ -1,0 +1,31 @@
+.mainDiv{
+    font-size: medium;
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+    /* border-style: dashed; */
+}
+form{
+    /* border-style: dotted; */
+    width: 70%;
+}
+.form-field{
+    border-style: groove;
+}
+label{
+    display: inline;
+    width: 100%;
+    font-weight: 200;
+    padding-left: 40%;
+    /* border-style: double; */
+}
+input{
+    display: inline;
+    width:98.7%;
+    padding-right: 2px;
+}
+textarea{
+    display: inline;
+    width: 99%;
+    height:50px;
+}
