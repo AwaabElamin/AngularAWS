@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { useCase } from '../Models/useCase';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ProjectsServicesService } from '../projects-services.service';
 
 @Component({
   selector: 'app-use-cases',
@@ -22,8 +23,12 @@ export class UseCasesComponent {
     owner : "Who owns this use case, in your project team?",
     priority : "Priority of this use case"
   }
-  constructor( private router: ActivatedRoute) {
-    console.log(router.snapshot.params['id']);
-    
+  constructor( private router: ActivatedRoute, private ProjectService:ProjectsServicesService) {
+    // console.log(router.snapshot.params['id']);    
+  }
+  submitForm(){
+    this.ProjectService.addUseCase(this.useCase).subscribe(
+      data => console.log("add use case:- " + data)
+    )
   }
 }
