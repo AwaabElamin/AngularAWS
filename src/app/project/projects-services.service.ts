@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments';
 import { useCase } from './Models/useCase';
+import { ReturnStatement } from '@angular/compiler';
 @Injectable({
   providedIn: 'root'
 })
@@ -32,5 +33,12 @@ export class ProjectsServicesService {
     const email = localStorage.getItem('email');
     const PID = localStorage.getItem('PID');
     return this.http.get<any>(this.backendUrl+"/actors" + "/" + email + "/" +PID)
+  }
+  addActor(actor:string){
+    return this.http.post<any>(this.backendUrl + "/actors",{
+      email : localStorage.getItem('email'),
+      PID : localStorage.getItem('PID'),
+      actor: actor
+    })
   }
 }
