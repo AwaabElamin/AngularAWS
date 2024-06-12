@@ -23,6 +23,7 @@ export class UserStoriesComponent implements OnChanges, OnInit {
   constructor(private projectsServices:ProjectsServicesService,private router: Router){}
   ngOnInit(): void {
     this.getAllUserStories();
+    this.getActors();
   }
   ngOnChanges(changes: SimpleChanges): void {
     this.getAllUserStories();
@@ -45,6 +46,12 @@ export class UserStoriesComponent implements OnChanges, OnInit {
     .subscribe(data=>{
       console.log(data);
       data.status === "success"? this.getAllUserStories(): null;
+    });
+  }
+  getActors(){
+    this.projectsServices.getAllActors()
+    .subscribe(data =>{
+      console.log('get all actors',data);
     });
   }
 }
