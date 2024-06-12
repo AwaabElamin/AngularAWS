@@ -1,3 +1,25 @@
+<div class="actors">
+    <table>
+        <thead>
+            <tr>
+                <th>Actors</th>
+            </tr>
+        </thead>
+        <tbody >
+            <tr *ngFor="let actor of actors">
+                <td>{{actor}}</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" [value] = "newActor" (change)="inputNewActor($event)"/>
+                </td>
+                <td>
+                    <button (click)="btnNewActorAdded()">Submit</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 <div class="addNew">
     <span>As</span>
     <select #cricket (change)="updateActor($event)">

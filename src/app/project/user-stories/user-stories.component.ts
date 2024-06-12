@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class UserStoriesComponent implements OnChanges, OnInit {
   actors = ["Customer","Admin","Manager","HR","Employee"];
   CRUDs = ["Create","Read","Update","Delete"];
+  newActor = "";
   selectedActor = "----";
   selectedCRUD = "----";
   InputActionValue = "----";
@@ -28,6 +29,17 @@ export class UserStoriesComponent implements OnChanges, OnInit {
   ngOnChanges(changes: SimpleChanges): void {
     this.getAllUserStories();
   }
+  inputNewActor = (e:any) => {  this.newActor = e.target.value; console.log("new Actor",e.target.value); };
+  btnNewActorAdded()  { 
+    this.projectsServices.addActor(this.newActor)
+    .subscribe(data =>{
+      console.log('Add Actor ',data);
+      if (data.message && data.status === "success") {
+        this.newActor = "";
+        this.getActors()
+      }
+    });
+   }
   updateActor=(e: any)=>this.selectedActor = e.target.value;
   updateCRUD=(e: any)=>this.selectedCRUD = e.target.value;
   updateInputAction=(e: any)=>this.InputActionValue = e.target.value;
@@ -51,7 +63,8 @@ export class UserStoriesComponent implements OnChanges, OnInit {
   getActors(){
     this.projectsServices.getAllActors()
     .subscribe(data =>{
-      console.log('get all actors',data);
+      // console.log('get all actors',data);
+      data.message && data.status === "success"? this.actors = data.message: null;
     });
   }
 }
