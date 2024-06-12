@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments';
+import { useCase } from './Models/useCase';
 @Injectable({
   providedIn: 'root'
 })
@@ -23,5 +24,13 @@ export class ProjectsServicesService {
     const email = localStorage.getItem('email');
     const PID = localStorage.getItem('PID');
     return this.http.post<any>(this.backendUrl+"/userStory",{email:email,PID:PID,actor:actor,cRUD:cRDU,action:action})
+  }
+  addUseCase(useCase:useCase){
+    return this.http.post<any>(this.backendUrl + "/useCase",useCase)
+  }
+  getAllActors(){
+    const email = localStorage.getItem('email');
+    const PID = localStorage.getItem('PID');
+    return this.http.get<any>(this.backendUrl+"/actors" + "/" + email + "/" +PID)
   }
 }
