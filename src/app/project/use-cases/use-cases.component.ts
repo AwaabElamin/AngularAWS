@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { useCase } from '../Models/useCase';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProjectsServicesService } from '../projects-services.service';
@@ -8,27 +8,65 @@ import { ProjectsServicesService } from '../projects-services.service';
   templateUrl: './use-cases.component.html',
   styleUrls: ['./use-cases.component.css']
 })
-export class UseCasesComponent {
-  public useCase: useCase= {
-    id : this.router.snapshot.params['id'],
-    title : "Enter the goal of the use case - preferably as a short, active verb phrase",
-    description : 'Describe the goal and context of this use case. This is usually an expanded version of what you entered in the Title field.',
-    PrimaryActor : "A person or a software/hardware system that interacts with your system to achieve   the goal of this use case.",
-    Preconditions : "Describe the state the system is in before the first event in this use case.",
-    postCondition : "Describe the state the system is in after all the events in this use case have taken place.",
-    mainSuccessScenario : "Describe the flow of events from preconditions to postconditions, when nothing goes wrong. This is the meat of the use case.",
-    extensions : "Describe all the other scenarios for this use case - including exceptions and error cases.",
-    frequencyOfUse : "How often will this use case be used?",
-    status : "Development status.",
-    owner : "Who owns this use case, in your project team?",
-    priority : "Priority of this use case"
-  }
+export class UseCasesComponent implements OnInit{
+  public useCase: useCase ={
+    id: this.router.snapshot.params['id'],
+    title: "",
+    description: "",
+    PrimaryActor:"",
+    Preconditions: "",
+    postCondition: "",
+    mainSuccessScenario: "",
+    extensions:"",
+    frequencyOfUse: "",
+    status: "",
+    owner: "",
+    priority: ""
+  };
   constructor( private router: ActivatedRoute, private ProjectService:ProjectsServicesService) {
     // console.log(router.snapshot.params['id']);    
   }
-  submitForm(){
-    this.ProjectService.addUseCase(this.useCase).subscribe(
-      data => console.log("add use case:- " + data)
+  ngOnInit(): void {
+    this.ProjectService.getUseCase(this.router.snapshot.params['id'])
+    .subscribe(data => 
+     data.status === "success"? this.updateUseCaseData(data.message):null
+    );
+  }
+  updateUseCaseData(message: any): void {
+    this.useCase.title = message.title;
+    this.useCase.description = message.title;
+    this.useCase.PrimaryActor = message.title;
+    this.useCase.Preconditions = message.title;
+    this.useCase.postCondition = message.title;
+    this.useCase.mainSuccessScenario = message.title;
+    this.useCase.extensions = message.title;
+    this.useCase.frequencyOfUse = message.title;
+    this.useCase.status = message.title;
+    this.useCase.owner = message.title;
+    this.useCase.priority = message.title;
+  }
+  submitForm(e:any){
+    e.preventDefault();
+    console.log('useCase', this.useCase);
+    this.ProjectService.addUseCase(this.useCase).
+    subscribe(
+      data => {console.log("add use case:- " + data);}
     )
+  }
+  useCaseChanged(e:any,sectionName:string){
+    e.preventDefault();
+    console.log("value", e.target.value);
+    console.log("section name", sectionName);
+    sectionName == "title" ? this.useCase.title = e.target.value : 
+    sectionName ==  "description" ? this.useCase.description = e.target.value: 
+    sectionName ==  "PrimaryActor" ? this.useCase.PrimaryActor = e.target.value: 
+    sectionName ==  "Preconditions" ? this.useCase.Preconditions = e.target.value: 
+    sectionName ==  "postCondition" ? this.useCase.postCondition = e.target.value : 
+    sectionName ==  "mainSuccessScenario" ? this.useCase.mainSuccessScenario = e.target.value: 
+    sectionName ==  "extensions" ? this.useCase.extensions = e.target.value: 
+    sectionName ==  "frequencyOfUse" ? this.useCase.frequencyOfUse = e.target.value :
+    sectionName ==  "status" ? this.useCase.status = e.target.value: 
+    sectionName ==  "owner" ? this.useCase.owner = e.target.value : 
+    sectionName ==  "priority" ? this.useCase.priority = e.target.value:null;
   }
 }

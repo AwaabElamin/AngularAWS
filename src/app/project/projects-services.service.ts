@@ -27,12 +27,15 @@ export class ProjectsServicesService {
     return this.http.post<any>(this.backendUrl+"/userStory",{email:email,PID:PID,actor:actor,cRUD:cRDU,action:action})
   }
   addUseCase(useCase:useCase){
-    return this.http.post<any>(this.backendUrl + "/useCase",useCase)
+    const email = localStorage.getItem('email');
+    const PID = localStorage.getItem('PID');
+    // console.log("useCase", useCase);
+    return this.http.post<any>(this.backendUrl + "/useCase" + "/" + email + "/" + PID,{useCase:useCase})
   }
   getAllActors(){
     const email = localStorage.getItem('email');
     const PID = localStorage.getItem('PID');
-    return this.http.get<any>(this.backendUrl+"/actors" + "/" + email + "/" +PID)
+    return this.http.get<any>(this.backendUrl+"/actors" + "/" + email + "/" + PID)
   }
   addActor(actor:string){
     return this.http.post<any>(this.backendUrl + "/actors",{
@@ -40,5 +43,10 @@ export class ProjectsServicesService {
       PID : localStorage.getItem('PID'),
       actor: actor
     })
+  }
+  getUseCase(id:string){  
+    const email = localStorage.getItem('email');
+    const PID = localStorage.getItem('PID');
+    return this.http.get<any>(this.backendUrl + "/useCase/" + email + "/" + PID + "/" + id)
   }
 }
