@@ -9,6 +9,7 @@ import { ProjectsServicesService } from '../projects-services.service';
   styleUrls: ['./use-cases.component.css']
 })
 export class UseCasesComponent implements OnInit{
+  errorMessage = "";
   public useCase: useCase ={
     id: this.router.snapshot.params['id'],
     title: "",
@@ -34,25 +35,23 @@ export class UseCasesComponent implements OnInit{
   }
   updateUseCaseData(message: any): void {
     this.useCase.title = message.title;
-    this.useCase.description = message.title;
-    this.useCase.PrimaryActor = message.title;
-    this.useCase.Preconditions = message.title;
-    this.useCase.postCondition = message.title;
-    this.useCase.mainSuccessScenario = message.title;
-    this.useCase.extensions = message.title;
-    this.useCase.frequencyOfUse = message.title;
-    this.useCase.status = message.title;
-    this.useCase.owner = message.title;
-    this.useCase.priority = message.title;
+    this.useCase.description = message.description;
+    this.useCase.PrimaryActor = message.PrimaryActor;
+    this.useCase.Preconditions = message.Preconditions;
+    this.useCase.postCondition = message.postCondition;
+    this.useCase.mainSuccessScenario = message.mainSuccessScenario;
+    this.useCase.extensions = message.extensions;
+    this.useCase.frequencyOfUse = message.frequencyOfUse;
+    this.useCase.status = message.status;
+    this.useCase.owner = message.owner;
+    this.useCase.priority = message.priority;
   }
   submitForm(e:any){
     e.preventDefault();
-    console.log('useCase', this.useCase);
+    // console.log('useCase', this.useCase);
     this.ProjectService.addUseCase(this.useCase).
-    subscribe(
-      data => {console.log("add use case:- " + data);}
-    )
-  }
+    subscribe(data =>data.status == "success"? this.errorMessage = "saved correctly": this.errorMessage = data.message)
+}
   useCaseChanged(e:any,sectionName:string){
     e.preventDefault();
     console.log("value", e.target.value);

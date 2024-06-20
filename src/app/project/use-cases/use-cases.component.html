@@ -49,7 +49,7 @@
         </div>
         <div class="form-field">
             <label for="frequencyOfUse">frequencyOfUse</label><br>
-            <textarea type="text" name="frequencyOfUse" id="frequencyOfUse" rows="10" cols="30"
+            <textarea type="text" name="frequency Of Use" id="frequencyOfUse" rows="10" cols="30"
                 [value]="useCase.frequencyOfUse" (change)= "useCaseChanged($event,'frequencyOfUse')"                ></textarea>
         </div>
         <div class="form-field">
@@ -70,6 +70,9 @@
         </div>
         <div class="form-field">
             <button (click)="submitForm($event);">Submit</button>
+        </div>
+        <div class="form-field">
+            <span>{{errorMessage}}</span>
         </div>
     </form>
 
