@@ -24,7 +24,7 @@ export class UseCasesComponent implements OnInit{
     owner: "",
     priority: ""
   };
-  constructor( private router: ActivatedRoute, private ProjectService:ProjectsServicesService) {
+  constructor(private route:Router, private router: ActivatedRoute, private ProjectService:ProjectsServicesService) {
     // console.log(router.snapshot.params['id']);    
   }
   ngOnInit(): void {
