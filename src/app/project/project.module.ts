@@ -6,6 +6,9 @@ import { MainComponent } from './main/main.component';
 import { ProjectRoutingModule } from './project-routing.module';
 import { NewComponent } from './new/new.component';
 import { AllProjectsComponent } from './all-projects/all-projects.component';
+import { UseCasesComponent } from './use-cases/use-cases.component';
+import { SDLCComponent } from './sdlc/sdlc.component';
+import { UserInterfaceComponent } from './user-interface/user-interface.component';
 
 
 
@@ -14,7 +17,10 @@ import { AllProjectsComponent } from './all-projects/all-projects.component';
     UserStoriesComponent,
     MainComponent,
     NewComponent,
-    AllProjectsComponent
+    AllProjectsComponent,
+    UseCasesComponent,
+    SDLCComponent,
+    UserInterfaceComponent
   ],
   imports: [
     CommonModule,

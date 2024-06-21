@@ -1,3 +1,35 @@
-.mainDiv{
-    
+
+.addNew{
+    padding-top: 3%;
+    font-size: mediums;
+}
+.addNew span{
+    margin-left: 3px;
+    margin-right: 3px;
+}
+.addNew select{
+    margin-left: 3px;
+    margin-right: 3px;
+}
+.addNew input{
+    margin-left: 3px;
+    margin-right: 3px;
+}
+.viewAll{
+    color: blue;
+    margin-top: 3px;
+    border-style: double;
+}
+.viewAll tr{
+    border-style: double;
+    border-width: 1px;
+    border-color: blue;
+}
+.viewAll th{
+    border-style: double;
+}
+.viewAll td{
+    border-style: double;
+    border-width: 1px;
+    border-color: blue;
 }
