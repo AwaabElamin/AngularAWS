@@ -6,27 +6,6 @@
 </div>
 <div>{{errorMessage}}</div>
 <div class="SDLC" *ngIf="ProjectSelected; else elseBlockOfProject">
-    <h1>{{projectName}}</h1>
-    <button >
-            <span>Planning</span>
-    </button>
-    <button  (click)="RequirementsClicked($event)" >
-            Requirements
-    </button>
-    <button >
-            <span>Design</span>
-    </button>
-    <button >
-            <span>Implementation</span>
-    </button>
-    <button>
-            <span>Testing</span>
-    </button>
-    <button>
-            <span>Deployment</span>
-    </button>
-    <button >
-            <span>Maintenance</span>
-    </button>
+   <app-sdlc/>
 </div>
 <ng-template #elseBlockOfProject></ng-template>

@@ -1,3 +1,4 @@
+<div><app-sdlc/></div>
 <div class="actors">
     <table>
         <thead>
@@ -54,7 +55,9 @@
             <td><a
                 [routerLink]="['../useCase',userStory._id]"
                 >Use Case</a></td>
-            <td><button (click)="openUI(userStory._id)">UI</button></td>
+            <td><a
+                [routerLink]="['../userInterface',userStory._id]"
+                >User Interface</a></td>
         </tr>
     </tbody>
     <tfoot>
