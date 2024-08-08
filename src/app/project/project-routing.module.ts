@@ -6,6 +6,7 @@ import { AllProjectsComponent } from './all-projects/all-projects.component';
 import { UseCasesComponent } from './use-cases/use-cases.component';
 import { UserInterfaceComponent } from './user-interface/user-interface.component';
 
+
 const routes: Routes = [
     { path: '', component: MainComponent },
     {path: 'allProjects', component: AllProjectsComponent},
@@ -14,7 +15,9 @@ const routes: Routes = [
     {path: 'userInterface/:id', component: UserInterfaceComponent,pathMatch: 'full'}    
   ];
   @NgModule({
-    imports: [RouterModule.forChild(routes)],
+    imports: [
+      RouterModule.forChild(routes)
+    ],
     exports:[RouterModule]
   })
   export class ProjectRoutingModule { }
