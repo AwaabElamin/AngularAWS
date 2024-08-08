@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnChanges, SimpleChanges } from '@angular/core';
 import { ResumeComponent } from './resume/resume.component';
 
 @Component({
@@ -6,7 +6,10 @@ import { ResumeComponent } from './resume/resume.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent{
- title:string = 'Awaab Elamin';
+export class AppComponent implements OnChanges{
+  mainRoute:boolean = window.location.pathname === "/";
   numbersOfYears = (new Date()).getFullYear() - 2020;
+  ngOnChanges(changes: SimpleChanges): void {
+    this.mainRoute = window.location.pathname === "/";
+  }
 }
