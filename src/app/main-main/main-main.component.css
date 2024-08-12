@@ -7,6 +7,7 @@
 }
 .summaryClass{
     color:blue;
-    border:3px solid blue;
+    border:3px double blue;
     padding-left: 3px;
+    padding:1%;
 }
