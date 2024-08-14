@@ -9,7 +9,7 @@ import { AllProjectsComponent } from './all-projects/all-projects.component';
 import { UseCasesComponent } from './use-cases/use-cases.component';
 import { SDLCComponent } from './sdlc/sdlc.component';
 import { UserInterfaceComponent } from './user-interface/user-interface.component';
-
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -24,7 +24,8 @@ import { UserInterfaceComponent } from './user-interface/user-interface.componen
   ],
   imports: [
     CommonModule,
-    ProjectRoutingModule
+    ProjectRoutingModule,
+    FormsModule
   ],
   exports:[MainComponent]
 })

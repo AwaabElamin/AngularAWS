@@ -1,1 +1,70 @@
-<p>user-interface works!</p>
+<div id="divInfo">
+    <h1>User Interface</h1>
+    <table>
+        <thead>
+            <tr>
+                <td>Area</td>
+                <td>Size</td>
+                <td>Color</td>
+                <td>Content</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Title</td>
+                <td>
+                    <input type="text" name="titleSize" id="titleSize" min="1" max="30"
+                        [(ngModel)]="userInterfaceData.title.size" />
+                </td>
+                <td>
+                    <input type="color" name="titleColor" id="titleColor" [(ngModel)]="userInterfaceData.title.color">
+                </td>
+                <td class="content">
+                    <textarea type="text" name="titleContent" id="titleContent" rows="3" cols="20"
+                        (click)="contentTitleChanged($event);"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>Inputs</td>
+                <td>
+                    <input type="number" name="InputsSize" id="titleSize" min="1" max="30"
+                        (change)="sizeInputsChanged($event);">
+                </td>
+                <td>
+                    <input type="color" name="InputsColor" id="titleColor" (change)="colorInputsChanged($event);">
+                </td>
+                <td>
+                    <textarea name="InputsContent" id="titleContent" rows="3" cols="20"
+                        (change)="contentInputsChanged($event);"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>Views</td>
+                <td>
+                    <input type="number" name="ViewsSize" id="titleSize" min="1" max="30"
+                        (change)="sizeViewChanged($event);" />
+                </td>
+                <td>
+                    <input type="color" name="ViewsColor" id="titleColor" (change)="colorViewsChanged($event);">
+                </td>
+                <td class="content">
+                    <textarea type="text" name="ViewsContent" id="titleContent" rows="3" cols="20"
+                        (change)="contentViewsChanged($event);"></textarea>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td></td>
+                <td><button id="btnSubmit" (click)="btnClicked($event);">Submit</button></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tfoot>
+    </table>
+    <div id="mainFrame">
+        <div id="title">
+            <label class="lblTitle"  [style.font-size]="[(userInterfaceData.title.size)]+'px'" [style.color]="[(userInterfaceData.title.color)]">{{userInterfaceData.title.content}}A</label>
+        </div>
+    </div>
+</div>

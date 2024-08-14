@@ -4,17 +4,24 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments';
 import { useCase } from './Models/useCase';
 import { ReturnStatement } from '@angular/compiler';
+import { uiData } from './Models/uiData';
 @Injectable({
   providedIn: 'root'
 })
 export class ProjectsServicesService {
+  
+  private backendUrl: string = environment.url + 'projects';
+  constructor(private http: HttpClient) { }
+  updateUI(id: string, uiData: uiData) {
+    const email = localStorage.getItem('email');
+    const PID = localStorage.getItem('PID');
+    return this.http.post<any>(this.backendUrl + "/ui" + "/" + email + "/" + PID + "/" + id,{uiData:uiData})
+  }
   getAllUserStories() {
     const email = localStorage.getItem('email');
     const PID = localStorage.getItem('PID');
     return this.http.get<any>(this.backendUrl+"/userStory" + "/" + email + "/" +PID)
   }
-  private backendUrl: string = environment.url + 'projects';
-  constructor(private http: HttpClient) { }
   postNewProject(email?:string, projectName?:String){
     return this.http.post<any>(this.backendUrl,{email:email,projectName:projectName})
   }
