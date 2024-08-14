@@ -1,13 +1,39 @@
-.mainClass{
+.mainClass {
     /* color: blue;
     border: 10px solid blue; */
     width: 80%;
     margin-left: 10%;
     padding-left: 3px;
 }
-.summaryClass{
-    color:blue;
-    border:3px double blue;
+
+.headerClass {
+    width: 50%;
+    border: 3px double blue;
+    text-align: center;
+    /* display: flex; */
+    justify-content: center;
+}
+
+.frameClass {
+    /* color:blue; */
+    border: 3px double blue;
     padding-left: 3px;
-    padding:1%;
+    padding: 1%;
+    margin-bottom: 3px;
+}
+
+.expClass {
+    /* float: inherit; */
+    /* padding-left: 3%; */
+    display: flex;
+    gap: 10px;
+}
+
+.expWidthClass {
+    width: 40%;
+    /* float: inline-start; */
+    /* margin-right: 2%; */
+    margin-top: 3px;
+    margin-bottom: 3px;
+    min-height: 300px;
 }
