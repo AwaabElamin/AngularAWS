@@ -9,7 +9,6 @@ import { uiData } from './Models/uiData';
   providedIn: 'root'
 })
 export class ProjectsServicesService {
-  
   private backendUrl: string = environment.url + 'projects';
   constructor(private http: HttpClient) { }
   updateUI(id: string, uiData: uiData) {
