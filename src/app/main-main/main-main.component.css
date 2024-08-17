@@ -39,3 +39,10 @@
     margin-bottom: 3px;
     min-height: 300px;
 }
+.payButtonClass{
+    background-color: blue;
+    color: white;
+}
+.payButtonClass a{
+    color:white;
+}

@@ -10,7 +10,7 @@ import { MainServiceService } from './main-service.service';
 export class MainMainComponent implements OnInit{
   summary: string = "";
   projects:any = []
-  constructor(private router:Router, private mainSerive: MainServiceService){
+  constructor(private router:Router, private mainService: MainServiceService){
     this.getProjects();
   }
   ngOnInit(): void {
@@ -25,10 +25,13 @@ export class MainMainComponent implements OnInit{
   
       }
   getProjects():void{
-    this.mainSerive.getProjects()
+    this.mainService.getProjects()
     .subscribe(data=>{
       if(data.status = "success") this.projects = data.message;
       else console.log(data)
     })
+  }
+  btnPayClicked(){
+    this.router.navigate(['../project']);
   }
 }
