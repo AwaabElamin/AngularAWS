@@ -7,13 +7,15 @@ import {HttpClientModule} from '@angular/common/http';
 import { MainHeaderComponent } from './main-header/main-header.component';
 import { MainFooterComponent } from './main-footer/main-footer.component';
 import { MainMainComponent } from './main-main/main-main.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainHeaderComponent,
     MainFooterComponent,
-    MainMainComponent
+    MainMainComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
