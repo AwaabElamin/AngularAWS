@@ -5,8 +5,21 @@ package-lock.json
 /tmp
 /out-tsc
 /bazel-out
+environments.*
+environments.ts
+environments
+/environments.*
+/environments.ts
+/environments
+src/environments.*
 src/environments.ts
+src/environments
 /src/environments.ts
+/src/environments
+./src/environments.ts
+./src/environments
+../src/environments.ts
+../src/environments
 
 # Node
 /node_modules
