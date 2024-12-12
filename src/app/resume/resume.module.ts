@@ -8,8 +8,6 @@ import { EducationComponent } from './education/education.component';
 import { CertificatesComponent } from './certificates/certificates.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { TitleComponent } from './title/title.component';
-
-
 @NgModule({
   declarations: [
     ResumeComponent,
