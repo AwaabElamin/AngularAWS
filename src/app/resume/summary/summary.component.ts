@@ -1,5 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import { ResumeDataService } from '../resume-data.service';
+import { Summary } from '../resume.model';
 
 @Component({
   selector: 'app-summary',
@@ -7,7 +8,7 @@ import { ResumeDataService } from '../resume-data.service';
   styleUrls: ['./summary.component.css']
 })
 export class SummaryComponent implements OnInit{
-  summary: string = "";
+  summary: Array<Summary> = [];
   btnValue = "Edit";
   editValue = true;
   constructor(private resumeDataService:ResumeDataService){}
@@ -15,30 +16,31 @@ export class SummaryComponent implements OnInit{
     this.getSummary();
   }
   getSummary():void{
-    this.resumeDataService.getResume()
+    this.resumeDataService.getSummary()
     .subscribe(data => {
-      this.summary = data.summary
+      console.log("Summary", data)
+      this.summary = data.data;
     });
   }
-  postSummary():void{
-    this.resumeDataService.postSummary(this.summary)
-    .subscribe(data => console.log(data));
-  }
-  editClicked():void{
-    let oldBtnValue = this.btnValue;
-    if (oldBtnValue == "Edit") {
-      this.btnValue = "Submit"
-    } else {
-      this.btnValue = "Edit"
-    }
-    if (oldBtnValue == "Submit") {
-      this.postSummary();
-      this.editValue = false;
-    } else {
-      this.editValue = true;
-    }
-  }
-  editChanged(e: any) {
-    this.summary = e.target.value;
-  }
+  // postSummary():void{
+  //   this.resumeDataService.postSummary(this.summary)
+  //   .subscribe(data => console.log(data));
+  // }
+  // editClicked():void{
+  //   let oldBtnValue = this.btnValue;
+  //   if (oldBtnValue == "Edit") {
+  //     this.btnValue = "Submit"
+  //   } else {
+  //     this.btnValue = "Edit"
+  //   }
+  //   if (oldBtnValue == "Submit") {
+  //     this.postSummary();
+  //     this.editValue = false;
+  //   } else {
+  //     this.editValue = true;
+  //   }
+  // }
+  // editChanged(e: any) {
+  //   this.summary = e.target.value;
+  // }
 }

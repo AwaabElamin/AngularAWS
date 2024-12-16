@@ -1,32 +1,13 @@
 <div class="card-experience">
     <h4>Experience</h4> 
-      <ul>
+      <ul *ngFor="let exp of experiences">
         <li>
-          <a aria-label="infosys" target="_blank" rel="noopener" href="{{infosys.split(',')[0]}}" title="infosys">
-            {{infosys.split(',')[1]}}
-          </a>,
-          {{infosys.split(',')[2]}},
-          {{infosys.split(',')[3]}},
-          {{infosys.split(',')[4]}}
-          <p>{{infosys.split(',')[5]}},
-            {{infosys.split(',')[6]}}, 
-            {{infosys.split(',')[7]}}, 
-            {{infosys.split(',')[8]}}, 
-            {{infosys.split(',')[9]}}, 
-            {{infosys.split(',')[10]}}, 
-            {{infosys.split(',')[11]}},
-            {{infosys.split(',')[12]}}</p>
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <a aria-label="ust" target="_blank" rel="noopener" href="{{awaabLlc.split(',')[0]}}" title="ust">
-            {{awaabLlc.split(',')[1]}}
-          </a>,
-          {{awaabLlc.split(',')[2]}},
-          {{awaabLlc.split(',')[3]}},
-          {{awaabLlc.split(',')[4]}}
-          <p>{{awaabLlc.split(',')[5]}}</p>
+          <h5>{{exp.positionName}} _ {{exp.companyName}}</h5>
+          <span>{{exp.startYear}}-{{exp.endYear}}</span>
+          <h6>{{exp.projectName}}</h6>
+          <p>{{exp.summary}}</p>
+          <h6>Technologies used:</h6>
+          <p>{{exp.TechnologiesUsed}}</p>
         </li>
       </ul>
   </div>

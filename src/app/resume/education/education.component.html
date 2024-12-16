@@ -1,19 +1,11 @@
 <div class="card-education">
-  <h4>Education</h4>
-  <ul>
+  <h4>Educations</h4>
+  <ul *ngFor="let education of educations; index as _id;">
     <li>
-        {{master.split(",")[2]}},
-        {{master.split(",")[3]}},
-        <a aria-label="miu" target="_blank" rel="noopener" href="{{master.split(',')[0]}}" title="miu">
-          {{master.split(",")[1]}}
-        </a>
-    </li>
-    <li>       
-        {{Bacholar.split(',')[2]}},
-        {{Bacholar.split(',')[3]}},
-        <a aria-label="ust" target="_blank" rel="noopener" href="{{Bacholar.split(',')[0]}}" title="ust">
-          {{Bacholar.split(',')[1]}}
-        </a>
+      <span><strong>{{education.universityName}}</strong>&nbsp;</span>
+      <span>{{education.yearOfGraduate}}</span><br/>
+      <span>{{education.degreeType}}</span> of <span>{{education.majorName}}</span>
+      
     </li>
   </ul>
 </div>

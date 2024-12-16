@@ -11,7 +11,6 @@ export class MainMainComponent implements OnInit{
   summary: string = "";
   projects:any = []
   constructor(private router:Router, private mainService: MainServiceService){
-    this.getProjects();
   }
   ngOnInit(): void {
     this.getProjects();
@@ -27,7 +26,11 @@ export class MainMainComponent implements OnInit{
   getProjects():void{
     this.mainService.getProjects()
     .subscribe(data=>{
-      if(data.status = "success") this.projects = data.message;
+      console.log("Awaab Data", data);
+      if(data.status == "success"){
+        this.projects = data.data;
+        console.log("projects", this.projects)
+      }
       else console.log(data)
     })
   }

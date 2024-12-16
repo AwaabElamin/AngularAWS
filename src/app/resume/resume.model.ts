@@ -16,5 +16,28 @@ export interface Resume {
     Experience:{Infosys:string,AwaaabLLC:string}
 }
 export interface Summary {
+    email:string,
+    summary:string
+}
+export interface education{
+    email: string,
+    universityName: string,
+    degreeType: string,
+    majorName: string,
+    yearOfGraduate: string
+}
+export interface Response{
+  status: string,
+  data: any
+}
+export interface experience{
+    email: string,
+    TechnologiesUsed:string,
+    companyName:string,
+    startYear:string,
+    positionName:string,
+    endYear:string,
+    projectName:string,
     summary:string,
+    link:string
 }

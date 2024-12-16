@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ResumeDataService } from '../resume-data.service';
+import { experience } from '../resume.model';
 
 @Component({
   selector: 'app-experience',
@@ -9,16 +10,20 @@ import { ResumeDataService } from '../resume-data.service';
 export class ExperienceComponent implements OnInit {
   infosys: string = "";
   awaabLlc: string = "";
+  experiences: Array<experience> = [];
   constructor(private resumeDataService: ResumeDataService) { }
   ngOnInit(): void {
-    this.getexperience();
+    this.getExperience();
   }
-  getexperience(): void {
-    this.resumeDataService.getResume()
+  getExperience(): void {
+    this.resumeDataService.getExperience()
       .subscribe(data => {
-        this.infosys = data.Experience.Infosys;
-        this.awaabLlc = data.Experience.AwaaabLLC;
-        // console.log("Data",data)
+        if (data.status == 'success') {
+          this.experiences = data.data;
+          // console.log("experiences", this.experiences);
+        } else {
+          // console.log("Data",data)
+        }
       })
   }
 

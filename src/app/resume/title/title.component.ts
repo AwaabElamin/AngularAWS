@@ -21,18 +21,18 @@ export class TitleComponent implements OnInit{
     this.getTitleData();
   }
   getTitleData():void{
-    this.resumeDataService.getResume()
-    .subscribe(data =>{
-      this.name = data.firstname + " " + data.lastname;
-      this.title =data.title;
-      this.phone = data.phone;
-      this.email = data.email;
-      this.city = data.city;
-      this.state = data.state;
-      this.country = data.country;
-      this.linkedInUrl =data.linkedInUrl;
-      this.gitHubUrl = data.gitHubUrl;
-      this.webside = data.webside;
-    });
+    // this.resumeDataService.getResume()
+    // .subscribe(data =>{
+    //   this.name = data.firstname + " " + data.lastname;
+    //   this.title =data.title;
+    //   this.phone = data.phone;
+    //   this.email = data.email;
+    //   this.city = data.city;
+    //   this.state = data.state;
+    //   this.country = data.country;
+    //   this.linkedInUrl =data.linkedInUrl;
+    //   this.gitHubUrl = data.gitHubUrl;
+    //   this.webside = data.webside;
+    // });
   }
 }

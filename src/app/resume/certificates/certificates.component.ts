@@ -14,12 +14,12 @@ export class CertificatesComponent implements OnInit{
     this.getCertificates();
   }
   getCertificates():void{
-    this.resumeDataService.getResume()
-    .subscribe(data => {
-      this.associate = data.Certificate.Associate;
-      this.certificates = data.Certificate.Certificates;
-      // console.log("Data", this.associate.split(',')[3]);
-    })
+    // this.resumeDataService.getResume()
+    // .subscribe(data => {
+    //   // this.associate = data.Certificate.Associate;
+    //   // this.certificates = data.Certificate.Certificates;
+    //   // console.log("Data", this.associate.split(',')[3]);
+    // })
   }
 
 }
