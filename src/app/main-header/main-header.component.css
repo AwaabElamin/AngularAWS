@@ -24,23 +24,6 @@ header {
     color: white;
 }
 
-.whiteLink img {
-    margin: 0 16px;
-}
-
-.whiteLink #twitter-logo {
-    margin: 0 8px;
-}
-
-.whiteLink #youtube-logo {
-    margin: 0 16px;
-}
-
-.whiteLink #twitter-logo:hover,
-.whiteLink #youtube-logo:hover {
-    opacity: 0.8;
-}
-
 .left {
     float: left;
     width: 20%;
@@ -50,20 +33,9 @@ header {
     width: 80%;
 }
 
-.resume {
-    width: 70px;
-}
 
 .login {
     width: 50px;
-}
-
-.facebookLogo {
-    width: 40px;
-}
-
-.twitterLogo {
-    width: 40px;
 }
 
 .right {
