@@ -1,10 +1,12 @@
 footer {
+    /* display: grid; */
+    /* grid-template-columns: 30% 30% 30%; */
     margin-top: 8px;
     width: 100%;
     display: flex;
     align-items: center;
     text-align: center;
-    line-height: 20px;    
+    line-height: 20px;
     background-color: blue;
     color: white;
     height: 10%;
@@ -12,46 +14,34 @@ footer {
     padding-bottom: 10px;
     padding-left: 10px;
     border-top-width: 1px;
-    border-top-color:black;
-    border-left-width:1px;
-    border-left-color:black;
-}
-
-footer a {
-    display: flex;
-    align-items: center;
+    border-top-color: black;
+    border-left-width: 1px;
+    border-left-color: black;
 }
 .github-star-badge {
-    color: #24292e;
-    display: flex;
+    color: white;
+    /* display: flex; */
+    /* width: 100%; */
     align-items: center;
-    font-size: 12px;
+    /* font-size: 12px; */
     padding: 3px 10px;
-    border: 1px solid rgba(27, 31, 35, .2);
+    border: 1px solid white;
     border-radius: 3px;
-    background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
     margin-left: 4px;
-    font-weight: 600;
+    /* font-weight: 600; */
+    border: 1px solid white;
 }
 
 .github-star-badge:hover {
-    background-image: linear-gradient(-180deg, #f0f3f6, #e6ebf1 90%);
+    background-image: linear-gradient(-180deg, blue, white 90%);
     border-color: rgba(27, 31, 35, .35);
     background-position: -.5em;
 }
 
-.github-star-badge .material-icons {
-    height: 16px;
-    width: 16px;
-    margin-right: 4px;
-}
-svg.material-icons {
-    height: 24px;
-    width: auto;
-}
-svg.material-icons:not(:last-child) {
-    margin-right: 8px;
-}
-.card svg.material-icons path {
-    fill: #888;
+.material-icons {
+    background-color: blue;
+    width:20px;
+    height:24px;
+    padding-right: 3px;
+    fill: white;
 }
