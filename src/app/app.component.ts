@@ -8,7 +8,6 @@ import { ResumeComponent } from './resume/resume.component';
 })
 export class AppComponent implements OnChanges{
   mainRoute:boolean = window.location.pathname === "/";
-  numbersOfYears = (new Date()).getFullYear() - 2020;
   ngOnChanges(changes: SimpleChanges): void {
     this.mainRoute = window.location.pathname === "/";
   }
