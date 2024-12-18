@@ -1,0 +1,28 @@
+.menu {
+    margin-top: 10%;
+    border: 1px solid blue;
+}
+
+.mainFrame {
+    border: 1px solid blue;
+    display: flex;
+    margin-top: 1%;
+}
+
+.divNew {
+    border: 1px solid blue;
+    width: 40%;
+}
+
+@media only screen and (max-width: 600px) {
+    .menu {
+        margin-top: 20%;
+    }
+    .mainFrame {
+        display: contents;
+    }
+    .divNew {
+        width: 99%;
+        margin-top: 1%;
+    }
+}
