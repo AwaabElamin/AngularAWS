@@ -12,9 +12,7 @@ import { environment } from 'src/environments';
 })
 export class LoginService {
   private backendUrl: string = environment.url + 'users';
-  constructor(private http: HttpClient, 
-    // public securityObject:AppUserAuth
-  ) { }
+  constructor(private http: HttpClient) { }
   postNewUser(user: LoginUser): Observable<any> {
     // console.log('user', user)
     return this.http.post<any>(this.backendUrl, { user })
@@ -24,12 +22,4 @@ export class LoginService {
     console.log('password', password)
     return this.http.post<any>(this.backendUrl + '/forget',{email,password})
   }
-  // isValidToken():boolean{
-  //   let result:boolean = false;
-  //  let userToken:string|undefined = localStorage.getItem("userToken")?.toString();
-  //  if (userToken) {
-  //     result = true;
-  //  }
-  //   return result;
-  // }
 }
