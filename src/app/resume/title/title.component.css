@@ -19,3 +19,21 @@
     /* margin-left: 70%; */
     /* border: 1px solid blue; */
 }
+@media only screen and (max-width: 1200px) {
+    .titleRow{
+        display: grid;
+        grid-template-columns: 30% 40% 30%;
+    }
+}
+@media only screen and (max-width: 520px) {
+    .titleRow{
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+    }
+}
+@media only screen and (max-width: 395px) {
+    .titleRow{
+        display: grid;
+        grid-template-columns: 30% 10% 30%;
+    }
+}
