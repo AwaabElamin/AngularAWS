@@ -35,9 +35,28 @@
     width: 40%;
     /* float: inline-start; */
     /* margin-right: 2%; */
-    margin-top: 3px;
-    margin-bottom: 3px;
+    text-align: center;
     min-height: 300px;
+    border-radius: 25%;
+    background-image: linear-gradient(30deg,blue,white);
+    border-color: blue;
+    border-style: solid;
+    color: white;
+    margin-bottom: 1%;
+}
+.expWidthClass ul {
+    /* margin: 3px; */
+    margin-right: 10%;
+    margin-left: 10%;
+}
+.expWidthClass ul li {
+    /* margin: 3px; */
+    padding-right: 10%;
+    padding-left: 10%;
+}
+.subscribeClass{
+    border: 1px solid blue;
+    margin-top: 1%;
 }
 .payButtonClass{
     background-color: blue;

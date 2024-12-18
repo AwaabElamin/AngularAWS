@@ -17,7 +17,7 @@ export class DataService {
   postLogin(email:string, password:string):Observable<Login>{
     this.body.email = email;
     this.body.password = password;
-    console.log('environment', this.backendUrl)
+    // console.log('environment', this.backendUrl)
     return this.Http.post<any>(this.backendUrl,this.body);
   }
 }

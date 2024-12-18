@@ -21,6 +21,10 @@
             <label for="password">password: </label>
             <input id="password" type="password" formControlName="password">
         </div>
+        <div class="form-field">
+            <label for="confirmPassword">confirm password: </label>
+            <input id="confirmPassword" type="password" formControlName="confirmPassword">
+        </div>
         <button class="btn" type="submit" [disabled]="!newUserForm.valid">Submit</button>
         <div class="form-field">
             <span>{{formStatus}}</span>
