@@ -12,7 +12,7 @@ export class AdminGuard implements CanActivate, CanActivateChild, CanDeactivate<
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    if (this.userToken && this.email === admin) {
+    if (this.userToken && this.email) {
       // console.log('Activate Child');
       return true;
     }
