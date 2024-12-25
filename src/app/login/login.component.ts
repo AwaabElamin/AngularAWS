@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
       .subscribe(data => {
         // console.log("response of login", data)
         if (data.status === 'fail') {
-          // console.log('data.status:', data.status);
+          console.log('data:', data);
           this.showEdit = false;
           this.errorMessage = "email and password are not match what we have!";
         } else {
@@ -45,7 +45,7 @@ export class LoginComponent implements OnInit {
           localStorage.setItem('userToken', data.accessToken);
           localStorage.setItem('email',this.email)
           // console.log("route url", this.router);
-          this.router.navigate(['/project']);
+          this.router.navigate(['/']);
         }
       }
       );
