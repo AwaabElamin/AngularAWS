@@ -9,7 +9,8 @@ import { environment } from 'src/environments';
 export class AutoService {
   private backendUrl: string = environment.url + 'auto';
   constructor(private http:HttpClient){}
-  getCurrentAutoUser():Observable<any> {
-    return this.http.get<Response>(this.backendUrl + '/user');
+  getCurrentAutoUser(email:string):Observable<any> {
+    console.log('email from get auto users service', email);
+    return this.http.get<Response>(this.backendUrl + '/user/'+email);
   }
 }

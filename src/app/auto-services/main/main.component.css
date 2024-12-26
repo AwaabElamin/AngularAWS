@@ -1,19 +1,37 @@
-.menu {
+.headerClass {
     margin-top: 10%;
     border: 1px solid blue;
+    display: flex;
 }
-
+.headerLeft{
+    border: 1px solid blue;
+    width:20%;
+}
+.headerMid{
+    border: 1px solid blue;
+    width: 60%;
+}
+.headerRight{
+    border: 1px solid blue;
+    width:20%;
+}
 .mainFrame {
     border: 1px solid blue;
     display: flex;
     margin-top: 1%;
 }
 
-.divNew {
+.container {
     border: 1px solid blue;
     width: 40%;
 }
-
+.usersHeaderTable{
+    border: 1px solid blue;
+    width: 100%;
+}
+.usersHeaderTable th{
+    border: 1px solid blue;
+}
 @media only screen and (max-width: 600px) {
     .menu {
         margin-top: 20%;
@@ -21,7 +39,7 @@
     .mainFrame {
         display: contents;
     }
-    .divNew {
+    .container {
         width: 99%;
         margin-top: 1%;
     }

@@ -22,6 +22,14 @@ export class LoginComponent implements OnInit {
   errorMessage: string = "";
   constructor(private loginService: DataService, private router: Router) { }
   ngOnInit(): void {
+    const token = window.localStorage.getItem('userToken');
+    if (token) {
+      this.errorMessage = "you already logged in!";
+      this.showEdit = false;
+    } else {
+      this.showEdit = true;
+      this.errorMessage = "";
+    }
   }
   emailChanged(e: any) {
     this.email = e.target.value;
