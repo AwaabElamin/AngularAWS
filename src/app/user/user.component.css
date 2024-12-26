@@ -1,0 +1,42 @@
+.allPageClass{
+    border:1px solid blue;
+    margin: 10%;
+}
+.headerClass{
+    border: 1px solid blue;
+    display: flex;
+}
+.headerLeft{
+    border: 1px solid blue;
+    width: 20%;
+}
+.headerMid{
+    border: 1px solid blue;
+    width:60%;
+    text-align: center;
+}
+.headerRight{
+    border: 1px solid blue;
+    width:20%;
+}
+.bodyClass{
+    border: 1px solid blue;
+    display: flex;
+}
+.rightBody{
+    border: 1px solid blue;
+    border-radius: 10%;
+    margin: 1%;
+    width: 60%;
+    text-align: center;
+}
+.ownerInfoClass{
+    border: 1px solid blue;
+    border-radius: 10%;
+    margin: 1%;
+    width: 30%;
+    text-align: center;
+}
+.footerClass{
+    border: 1px solid blue;
+}

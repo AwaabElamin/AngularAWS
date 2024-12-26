@@ -1,0 +1,9 @@
+tr{
+    border: 1px solid blue;
+    width: 80%;
+}
+td{
+    border: 1px solid blue;
+    width: 20%;
+    text-align: center;
+}

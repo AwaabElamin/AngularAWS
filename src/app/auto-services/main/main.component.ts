@@ -9,20 +9,45 @@ import { AutoService } from '../auto.service';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-  user:{} | undefined;
-  urlIframe:any =  this.sanitizer.bypassSecurityTrustResourceUrl("https://main.dfnradbwueq86.amplifyapp.com/usedcars/new");
-  constructor(private router:Router, private sanitizer: DomSanitizer, private autoService:AutoService){}
-  ngOnInit(){
-    this.autoService.getCurrentAutoUser()
-    .subscribe(data=>{
-      console.log('user at auto hub', data);
-    });
+  users: [{
+    firstName: string,
+    lastName: string,
+    email: string,
+    password: string,
+    userRole: string,
+    status: number,
+    ownerEmail: string
+  }] = [{
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+    userRole: "",
+    status: 1,
+    ownerEmail: ""
+  }];
+  urlIframe: any = this.sanitizer.bypassSecurityTrustResourceUrl("https://main.dfnradbwueq86.amplifyapp.com/usedcars/new");
+  constructor(private router: Router, private sanitizer: DomSanitizer, private autoService: AutoService) { }
+  ngOnInit() {
+    const ownerEmail = localStorage.getItem('email')!;
+    this.autoService.getCurrentAutoUser(ownerEmail)
+      .subscribe(data => {
+        if (data.status === 'success') { 
+          while(this.users.length > 0) {
+            this.users.pop();
+        } 
+          this.users.push(data.data);                  
+        console.log('user at auto hub', this.users);
+        } else {          
+        console.log('user at auto hub', data);
+        }
+      });
   }
-  btnNewClicked(){
+  btnNewClicked() {
     this.urlIframe = this.sanitizer.bypassSecurityTrustResourceUrl("https://main.dfnradbwueq86.amplifyapp.com/usedcars/new");
     console.log("iframe url", this.urlIframe);
   }
-  btnViewClicked(){
+  btnViewClicked() {
     this.urlIframe = this.sanitizer.bypassSecurityTrustResourceUrl("https://main.dfnradbwueq86.amplifyapp.com");
   }
 }

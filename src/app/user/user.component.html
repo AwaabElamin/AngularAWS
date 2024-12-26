@@ -1,1 +1,28 @@
-<p>user works!</p>
+<div class="allPageClass">
+    <div class="headerClass">
+        <div class="headerLeft">
+            header left
+        </div>
+        <div class="headerMid">
+            <h4>{{userInfo.firstname}} {{userInfo.lastname}}</h4>
+        </div>
+        <div class="headerRight">
+            header right
+        </div>
+    </div>
+    <div class="bodyClass">
+        <div class="rightBody">
+            <p>Through your own office you can manage all your programs.</p>
+            <p><a href="/auto">auto Service</a></p>
+        </div>
+        <div class="ownerInfoClass">
+            <span><strong>Owner Info</strong></span><br>
+            <label>{{userInfo.firstname}} {{userInfo.lastname}}</label> <br>
+            <label>{{userInfo.email}}</label><br>
+            <label>{{userInfo.phone}}</label>
+        </div>
+    </div>
+    <div class="footerClass">
+        footer
+    </div>
+</div>
