@@ -45,7 +45,7 @@ export class LoginComponent implements OnInit {
           localStorage.setItem('userToken', data.accessToken);
           localStorage.setItem('email',this.email)
           // console.log("route url", this.router);
-          this.router.navigate(['/']);
+          this.router.navigate(['/user']);
         }
       }
       );
