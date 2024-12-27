@@ -3,7 +3,7 @@
         header left
     </div>
     <div class="headerMid">
-        header mid
+        {{users[0].firstname}} {{users[0].lastname}}
     </div>
     <div class="headerRight">
         header right
@@ -11,25 +11,34 @@
 </div>
 <div class="mainFrame">
     <div class="container" style="margin-right: 10%;">
-        <table class="usersHeaderTable">
+        <table *ngIf="!noAccount" class="usersHeaderTable">
             <thead>
                 <th style="width: 11%;">firstname</th>
                 <th style="width: 11%;">lastname</th>
                 <th style="width: 30%;">email</th>
                 <th style="width: 10%;">role</th>
                 <th style="width: 5%;">status</th>
-                <th style="width: 11%;"></th>
-                <th style="width: 11%;"></th>
             </thead>
-        </table >
-        
-        <table class="usersHeaderTable" *ngFor="let u of users">
-            <app-users [user]="u" />
         </table>
-        <tr>
+        <div *ngIf="!noAccount">
+            <table class="usersHeaderTable" *ngFor="let u of users">
+                <app-users [user]="u" />
+            </table>
+        </div>
+        <div *ngIf="!noAccount">
+            <p>we automatically create your admin account for auto hub</p>
+            <p>we used your email as username</p>
+            <p>and your firstname as password</p>
+            <p>click <a href="https://main.dfnradbwueq86.amplifyapp.com/" target="_blank" rel="noopener noreferrer">here</a>  to see market base of auto hub</p>
+            <p>or click <a href="https://main.dfnradbwueq86.amplifyapp.com/employee" target="_blank" rel="noopener noreferrer">here</a>  to mange your auto hub</p>
+        </div>
+        <tr *ngIf="noAccount">
+            <td>Do you want to create account in Auto Services?</td>
             <td>
-                <button type="button">add new user</button>
+                <button type="button" (click)="btnCreateAuoUser();">Yes</button>
             </td>
+            <td *ngIf="youSure">you sure?</td>
+            <td *ngIf="youSure"><button type="button" (click)="btnCreateAuoUser();">Yes</button></td>
         </tr>
 
     </div>
