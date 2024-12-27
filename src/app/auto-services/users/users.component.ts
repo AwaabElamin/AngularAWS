@@ -7,16 +7,16 @@ import { Component, Input } from '@angular/core';
 })
 export class UsersComponent {
   @Input() user: {
-    firstName: string,
-    lastName: string,
+    firstname: string,
+    lastname: string,
     email: string,
     password: string,
     userRole: string,
     status: number,
     ownerEmail: string
   } = {
-      firstName: '',
-      lastName: '',
+      firstname: '',
+      lastname: '',
       email: '',
       password: '',
       userRole: '',
