@@ -1,0 +1,22 @@
+export interface Product{
+    mainPhoto:string,
+    photos:any[],
+    title:string,
+    ingredients:{
+      ingredients:string,
+      activeIngredientName:string
+    },
+    aboutItem:{
+      nutritionFacts:string,
+      productDetails:string
+    },
+    aboutBrand:{
+      brandName:string
+    },
+    specifications:string,
+    customerRatingReviews:[{
+      viewerName:string,
+      viewerRate:string
+    }],
+    price:number
+}

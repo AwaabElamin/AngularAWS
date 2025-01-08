@@ -3,11 +3,12 @@ all products
     <div class="left">
         <div class="productClass">
             <div class="allClass" *ngFor="let item of items">
-                <app-mini-product-view />
+                <app-mini-product-view [item] = item />
+                <button (click)="btnItem(item);">More...</button>
             </div>
         </div>    
-        <div class="profileClass">
-            <app-product-profile />
+        <div class="profileClass" *ngIf="product">
+            <app-product-profile [product] = product/>
         </div>
     </div>
     
