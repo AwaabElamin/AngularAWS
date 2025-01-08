@@ -1,9 +1,17 @@
 all products
 <div class="mainFrame">
-    <div class="productClass">
-        <app-product-profile />
+    <div class="left">
+        <div class="productClass">
+            <div class="allClass" *ngFor="let item of items">
+                <app-mini-product-view />
+            </div>
+        </div>    
+        <div class="profileClass">
+            <app-product-profile />
+        </div>
     </div>
+    
     <div class="cartFrame">
-        <p>cart frame</p>
+        <app-cart />
     </div>
 </div>

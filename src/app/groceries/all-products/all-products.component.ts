@@ -7,5 +7,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./all-products.component.css']
 })
 export class AllProductsComponent {
+  items = ["10","20"];
   constructor(private router:Router){}
 }
