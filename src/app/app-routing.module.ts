@@ -9,7 +9,8 @@ const routes: Routes = [
   { path: 'user',canActivateChild:[AuthGuardGuard], loadChildren: () => import('./user/user.module').then(m => m.UserModule) },
   { path: 'project',canActivateChild:[AuthGuardGuard], loadChildren: () => import('./project/project.module').then(m => m.ProjectModule) },
   { path: 'auto',canActivateChild:[AuthGuardGuard], loadChildren: () => import('./auto-services/auto-services.module').then(m => m.AutoServicesModule) },
-  { path: 'groceries',canActivateChild:[AuthGuardGuard], loadChildren: () => import('./groceries/groceries.module').then(m => m.GroceriesModule) }
+  { path: 'groceries',canActivateChild:[AuthGuardGuard], loadChildren: () => import('./groceries/groceries.module').then(m => m.GroceriesModule) },
+  { path: 'photos', loadChildren:()=> import('./photos/photos.module').then(m => m.PhotosModule)}
   // { path: 'admin',canActivateChild:[AdminGuard], loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) }
 ];
 

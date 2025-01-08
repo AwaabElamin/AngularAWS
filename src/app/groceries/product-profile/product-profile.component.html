@@ -1,1 +1,16 @@
-<p>product-profile works!</p>
+<div class="productFrame">
+    <div class="photosFrame">
+        <div class="sidePhotos">
+            <div *ngFor="let photo of photos">
+                <img class="miniPhoto" src="{{photo}}" alt="" (mouseover)="photoClicked(photo);"
+                    (click)="photoClicked(photo);">
+            </div>
+        </div>
+        <div class="mainPhoto">
+            <img class="mainPhotoImg" src="{{mainPhoto}}" alt="">
+        </div>
+    </div>
+    <div class="productInfo">
+        product Info
+    </div>
+</div>
