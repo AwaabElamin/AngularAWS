@@ -3,7 +3,7 @@
     display: flex;
 }
 .photosFrame {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     display: grid;
     grid-template-columns: 20% 70%;
     column-gap: 1%;
@@ -13,7 +13,7 @@
 }
 
 .sidePhotos {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     width: 100%;
     /* padding-right: 1%; */
     /* float: left; */
@@ -21,7 +21,7 @@
 
 .miniPhoto {
     width: 80%;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 }
 .mainPhotoImg{
     /* border: 1px solid blue; */
@@ -31,6 +31,6 @@
     transform: scale(1.5);
 }
 .productInfo{
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     width: 90%;
 }
