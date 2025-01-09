@@ -1,9 +1,12 @@
 .mainFrame{
     /* border: 1px solid red; */
-    display: inline;
+    /* display: flex; */
+    width: 100%;
+    align-items: center;
+    padding: 1%;
 }
 /* .imgFrame{
-    border: 1px solid gray;
+    border: 1px solid blue;
 } */
 .imgSize{
     width: 100%;
