@@ -1,16 +1,18 @@
 all products
 <div class="mainFrame">
-    <table class="left">
-        <tr class="productClass"  *ngFor="let item of items; index as i;">
-            <td class="allClass" *ngIf="i<5">
-                <app-mini-product-view [item] = item />
-                <button class="btnProductDetails" (click)="btnItem(item);" *ngIf="i<5">More...</button>
-            </td>
-        </tr>    
+    <div class="left">
+        <div style="display: flex;">
+            <div class="productClass"  >
+                <div class="allClass" *ngFor="let item of items; index as i;">
+                    <app-mini-product-view [item] = item />
+                    <button class="btnProductDetails" (click)="btnItem(item);">More...</button>
+                </div>
+            </div>
+        </div>    
         <div class="profileClass" *ngIf="product">
             <app-product-profile [product] = product/>
         </div>
-    </table>
+    </div>
     
     <div class="cartFrame">
         <app-cart />
