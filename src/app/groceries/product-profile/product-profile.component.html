@@ -1,0 +1,25 @@
+<div class="productFrame">
+    <div class="photosFrame">
+        <div class="sidePhotos">
+            <div *ngFor="let photo of product.photos">
+                <img class="miniPhoto" src="{{photo}}" alt="" (mouseover)="photoClicked(photo);"
+                    (click)="photoClicked(photo);">
+            </div>
+        </div>
+        <div class="mainPhoto">
+            <img class="mainPhotoImg" src="{{product.mainPhoto}}" alt="">
+        </div>
+    </div>
+    <div class="productInfo">
+        <h4>{{product.title}}</h4>
+        <button (click)="addToCart()">Add to Cart</button>
+        <hr>
+        <h4>Ingredients</h4>
+        <p>{{product.ingredients.ingredients}}</p>
+        <h4>Active Ingredient Name</h4>
+        <p>{{product.ingredients.activeIngredientName}}</p>
+        <hr>
+        <h4>About this item</h4>
+        <p>{{product.aboutItem.productDetails}}</p>
+    </div>
+</div>

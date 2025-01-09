@@ -1,0 +1,30 @@
+.mainFrame{
+    /* border: 1px solid black; */
+    padding: 1%;
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+.left{
+    /* border: 2px solid green; */
+    width: 100%;
+}
+.productClass{
+    width: 100%;
+    /* display: flex;  */
+    /* border: 1px solid black; */
+    margin-bottom: 1%;   
+}
+.allClass{
+    width: 20px;
+    border: 1px solid blue;
+    margin: 0.5%;
+    padding: 0.5%;
+}
+.profileClass{
+    width: 100%;
+}
+.cartFrame{
+    width: 100%;
+    border: 1px solid red;
+    margin-left: 1%;
+}
