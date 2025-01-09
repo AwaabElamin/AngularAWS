@@ -25,7 +25,7 @@
 }
 .mainPhotoImg{
     /* border: 1px solid blue; */
-    width: 100%;
+    width: 100px;
 }
 .mainPhotoImg:hover{
     transform: scale(1.5);
