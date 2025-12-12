@@ -4,10 +4,12 @@ import com.example.backendspringboot.models.Product;
 import com.example.backendspringboot.repositories.ProductRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "*")
 @RequestMapping("/api/products")
 public class ProductController {
     private final ProductRepository productRepository;
