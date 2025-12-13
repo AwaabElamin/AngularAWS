@@ -8,5 +8,6 @@
         "lastname",
         "newuser",
         "webside"
-    ]
+    ],
+    "java.configuration.updateBuildConfiguration": "interactive"
 }
