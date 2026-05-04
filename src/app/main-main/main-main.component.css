@@ -1,57 +1,50 @@
 .mainClass {
-    /* color: blue;
-    border: 10px solid blue; */
     width: 80%;
     margin-left: 10%;
     padding-left: 3px;
-    margin-top: 10%;
+    margin-top: 2%;
 }
 
 .headerClass {
     width: 50%;
-    border: 2px solid rgb(240, 230, 230);
+    border: 1px solid #dbe3f3;
     text-align: center;
-    /* display: flex; */
     margin-left: 25%;
-    margin-bottom: 3px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 26px rgba(0, 35, 99, 0.08);
     
 }
 
 .frameClass {
-    /* color:blue; */
-    border: 2px solid rgb(240, 230, 230);
+    border: 1px solid #dbe3f3;
     padding-left: 3px;
-    padding: 1%;
-    margin-bottom: 3px;
+    padding: 1.2%;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 18px rgba(0, 35, 99, 0.06);
 }
 
 .expClass {
-    /* float: inherit; */
-    /* padding-left: 3%; */
     display: flex;
-    gap: 10px;
+    gap: 14px;
 }
 
 .expWidthClass {
     width: 40%;
-    /* float: inline-start; */
-    /* margin-right: 2%; */
     text-align: center;
-    /* min-height: 300px; */
-    border-radius: 25%;
-    /* background-image: linear-gradient(30deg,blue,white); */
-    border-color: rgb(240, 230, 230);
+    border-radius: 14px;
+    border-color: #dbe3f3;
     border-style: solid;
-    /* color: white; */
     margin-bottom: 1%;
 }
 .expWidthClass ul {
-    /* margin: 3px; */
     margin-right: 10%;
     margin-left: 10%;
 }
 .expWidthClass ul li {
-    /* margin: 3px; */
     padding-right: 10%;
     padding-left: 10%;
 }
@@ -73,14 +66,21 @@
 }
 @media only screen and (max-width: 600px) {
     .mainClass {
-        margin-top: 20%;
+        width: 92%;
+        margin-left: 4%;
+        margin-top: 0;
     }
+
+    .headerClass {
+        width: 100%;
+        margin-left: 0;
+    }
+
     .expClass {
-        /* float: inherit; */
-        /* padding-left: 3%; */
-        display: contents;
+        display: block;
         gap: 10px;
     }
+
     .expWidthClass {
         width: 100%;
     }

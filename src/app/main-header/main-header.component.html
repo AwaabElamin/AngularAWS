@@ -1,6 +1,6 @@
 <header class="row">
   <div class="left">
-    <a routerLink="/" class="whiteLink">
+    <a routerLink="/" class="brandLink" aria-label="Go to home page">
       <img width="40" alt="Awaab Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMj
           UwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMT
           QuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy
@@ -8,12 +8,19 @@
           kuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==" />
       <span>Awaab Elamin</span></a>
   </div>
-  <div class="middle spacer"></div>
+
+  <nav class="middle" aria-label="Primary navigation">
+    <a routerLink="/" routerLinkActive="activeLink" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+    <a routerLink="/resume" routerLinkActive="activeLink">Resume</a>
+    <a routerLink="/photos" routerLinkActive="activeLink">Photos</a>
+    <a routerLink="/login" routerLinkActive="activeLink">Services</a>
+  </nav>
+
   <div class="login" *ngIf="loginStatus; else elseBlock">
-    <a routerLink="/login" class="whiteLink">login</a>
+    <a routerLink="/login" class="authLink">Login</a>
   </div>
   <ng-template #elseBlock>
-    <a routerLink="" (click)="logoutClicked()" class="whiteLink">logout</a>
+    <a routerLink="" (click)="logoutClicked()" class="authLink">Logout</a>
   </ng-template>
  
 </header>

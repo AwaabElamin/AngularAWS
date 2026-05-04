@@ -1,15 +1,18 @@
 header {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    height: 10%;
+    min-height: 64px;
     display: flex;
     align-items: center;
-    background-color: blue;
+    gap: 12px;
+    background: linear-gradient(90deg, #0a3a8a, #1058c8);
     color: white;
     font-weight: 600;
-    margin-bottom: 1%;
+    padding: 8px 16px;
+    z-index: 1000;
+    box-shadow: 0 6px 18px rgba(8, 30, 69, 0.25);
 }
 
 .row:after {
@@ -18,24 +21,55 @@ header {
     clear: both;
 }
 
-.whiteLink {
-    /* padding-left: 3px;
-    margin-left: 3px; */
+.brandLink {
     color: white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
 }
 
 .left {
-    float: left;
-    width: 20%;
+    min-width: 220px;
 }
 
 .middle {
-    width: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.middle a {
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    padding: 8px 12px;
+    transition: background-color .2s ease, border-color .2s ease;
+}
+
+.middle a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.activeLink {
+    background-color: rgba(255, 255, 255, 0.22);
+    border-color: rgba(255, 255, 255, 0.65);
 }
 
 
 .login {
-    width: 50px;
+    min-width: 90px;
+    text-align: right;
+}
+
+.authLink {
+    color: #0a3a8a;
+    background-color: #ffffff;
+    border-radius: 999px;
+    padding: 8px 12px;
+    font-weight: 700;
 }
 
 .right {
@@ -45,4 +79,24 @@ header {
 
 .loginDiv {
     width: 34px;
+}
+
+@media only screen and (max-width: 880px) {
+    header {
+        position: static;
+        flex-wrap: wrap;
+    }
+
+    .left,
+    .middle,
+    .login {
+        width: 100%;
+        min-width: unset;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .middle {
+        flex-wrap: wrap;
+    }
 }
